@@ -16,4 +16,20 @@ table {
 body {
   margin: 0; }
 
+body {
+  display: flex;
+  flex-direction: row-reverse; }
+
+header {
+  width: 50%;
+  height: 100%; }
+
+main {
+  width: 50%;
+  height: 100%; }
+
+.landing-img {
+  width: 100%;
+  height: 100%; }
+
 /*# sourceMappingURL=styles.css.map */
