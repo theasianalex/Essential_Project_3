@@ -1,0 +1,65 @@
+// Global Website Variables
+
+// Colours
+$brand-color: white;
+$bg-body-color: #fff;
+$hover-color: lightblue;
+
+// Text Colours
+$text-color: black;
+$mycolor: #005DFF;
+       
+
+// Fonts
+$body-font: Arial, sans-serif;
+$header-font: Georia, Times, Times New Roman, serif;
+$contact-font: Tahoma, Verdana, Segoe, sans-serif;
+$button-font: Arial, sans-serif;
+// Typographic Defualts - Global line height
+$line-height: 1.4;
+
+// Layout Variables
+$padding: 30px;
+// Grid Variables
+$gutter: 2;
+
+
+// Function to determine column width
+// takes two numerical parameters:
+// $c -> the number of columns in a row
+// $g -> the gutter amount
+@function colWidth($c, $g: 2){
+    @return ((100 - $g * ($c - 1)) / $c) * 1%;
+}
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+
+
+// Media Query Breakpoints
+$tablet: em(1024);
+$phone: em(640);
+
+
+// Hover selector
+$hover: '&:hover, &:focus, &:active';
+
+
