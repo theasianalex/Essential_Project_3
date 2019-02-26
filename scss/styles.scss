@@ -11,15 +11,23 @@
 
 // Resets and Defaults
 @import 'reset';
-@import 'text';
 
 // Site Sections
 @import 'body';
-@import 'header';
+@import 'menu-right';
 @import 'hamburger';
 @import 'nav';
 @import 'footer';
 
 // Specialty Items
+@import 'artists';
+@import 'collectors';
+@import 'exhibitions';
+@import 'all-stories';
+@import 'fairs';
+@import 'contact';
 @import 'subscribes';
 @import 'landing';
+
+//Responsive 
+@import 'mobile';
