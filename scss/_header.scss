@@ -3,8 +3,7 @@ header {
     background-color: $brand-color;
     padding: $padding $padding*2;
     @include flex-layout-row;
-    @include flex-layout-column;
-    
+    @include flex-layout-column;  
 
     h1 {
         @include flatten;
