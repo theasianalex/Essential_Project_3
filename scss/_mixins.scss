@@ -1,3 +1,12 @@
+// Mixin for media query
+@mixin desktop {
+    @media (min-width: $desktopMedium) {
+        @content;
+    }
+}
+
+
+
 // Mixin for centering element
 // with margin-left: auto
 // and margin-right: auto;
