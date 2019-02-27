@@ -198,3 +198,29 @@ $aspect-ratios: (
         }
     }
 }
+
+
+
+
+
+
+//Tranform
+
+@mixin transform {
+    transform: translate(-50%,50%);
+}
+
+//link
+
+@mixin no-style-link {
+    text-decoration: none;
+    color: #060708;
+}
+
+//logo
+@mixin essential {
+    font-weight: bold;
+    font-family: $font;
+    font-size: $font-h1;
+    color: $text-color;
+}
