@@ -1,50 +1,7 @@
 .all-stories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "c1 c1 c1 c2";
-    font-family: $font;
-    color: #060708;
+    @include display-gird;
+    @include menu-right;
 
-    header {
-        grid-area: c2;
-        margin-right: 3vw;
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-    header  h1 a {
-        //@include transform;
-        @include no-style-link;
-        @include essential-other;
-        text-align: right;
-        display: block;
-        position: relative;
-        
-    }
-    .menu-li {
-        padding: 0; 
-        font-size: $font-p;
-        font-weight: bold;
-        display: inline;
-    }
-    
-    .subscribes-box {
-        font-size: $font-p;
-        font-weight: bold;  
-        position: absolute;
-        top: 90vh;
-        right: 0vw;
-        @include no-style-link;
-        padding: 0;
-    }
-    .subscribes-box a {
-        margin: 0;
-        color: white;
-        display: block;
-        padding: 0 2vw 0 2vw;
-        background-color: #060708;
-    }
 
     main {
         grid-area: c1;
