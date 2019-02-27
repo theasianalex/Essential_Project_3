@@ -46,16 +46,7 @@
         float: right;
     }
 
-    .subscribes a {
-        text-decoration: none;
-    }
 
-    .subscribes p {
-        background-color: $button-color;
-        color: $text-color;
-        font-size: $font-p;
-        text-align: right;
-    }
 }
 
 
@@ -65,27 +56,13 @@
 
 @include desktop {
 
-.prev {grid-area: prev;}
-.collectors-img {grid-area: photo;}
-.next {grid-area: next;}
-header {grid-area: manu;}
+    @include display-gird;
+    @include menu-right;
 
-.wrapper {
-    
 
-    display: grid;
-    grid-template-areas: 
-        'prev photo photo next manu';
-    grid-gap: 1%;
-
-    header {
-        width: 19%;
-        .button {display: none;}
-
-        h1 {font-size: $font-h1;}
-        
+    main {
+        grid-area: c1;
     }
-}
 
 }
 
