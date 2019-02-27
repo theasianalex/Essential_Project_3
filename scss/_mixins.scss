@@ -217,10 +217,23 @@ $aspect-ratios: (
     color: #060708;
 }
 
-//logo
+//logo landing subscribes page
 @mixin essential {
     font-weight: bold;
     font-family: $font;
     font-size: $font-h1;
     color: $text-color;
+}
+//logo other page
+@mixin essential-other {
+    font-weight: bold;
+    font-family: $font;
+    font-size: $font-h2;
+    color: $text-color;
+}
+
+//layout
+@mixin no-mar-pad {
+    margin: 0;
+    padding: 0;
 }
