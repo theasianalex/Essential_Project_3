@@ -6,7 +6,6 @@ $bg-body-color: #fff;
 $hover-color: lightblue;
 
 // Text Colours
-$text-color: black;
 $mycolor: #005DFF;
        
 
@@ -63,6 +62,10 @@ $phone: em(640);
 $hover: '&:hover, &:focus, &:active';
 
 
+
+
+
+
 //colors
 
 $button-color: #060708;
@@ -76,10 +79,10 @@ $text-box-color: #bfbfbf;
 $font: 'Merriweather', Times, Times New Roman, serif;
 
 //font size
-$font-h1: 8vw;
-$font-h2: 6vw;
-$font-h3: 4vw;
-$font-p:  4vw;
+$font-h1: 6vw;
+$font-h2: 4vw;
+$font-h3: 2vw;
+$font-p:  2vw;
 
 //layout
 
@@ -88,5 +91,6 @@ $margin-p: 4vw;
 
 // Link Selector
 $link-hover-selector: '&:hover, &:focus, &:active';
+
 
 
