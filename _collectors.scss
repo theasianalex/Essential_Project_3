@@ -1,0 +1,67 @@
+// Layout the page - mobile
+
+.wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    header {
+        text-align: right; 
+    }
+
+    .button {
+        color: $button-color;
+    }
+
+    .collectors-img {
+        display: block;
+    }
+
+    footer {
+        display: block;
+        float: right;
+    }
+
+    .subscribes a {
+        text-decoration: none;
+    }
+
+    .subscribes p {
+        background-color: $button-color;
+        color: $text-color;
+        font-size: $font-p;
+    }
+}
+
+
+
+// Layout - for desktop 
+
+
+@include desktop {
+
+.prev {grid-area: prev;}
+.collectors-img {grid-area: photo;}
+.next {grid-area: next;}
+header {grid-area: manu;}
+
+.wrapper {
+    
+
+    display: grid;
+    grid-template-areas: 
+        'prev photo photo next manu';
+    grid-gap: 1%;
+
+    header {
+        width: 19%;
+        .button {display: none;}
+
+        h1 {font-size: $font-h1;}
+        
+    }
+}
+
+}
+
+
