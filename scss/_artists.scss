@@ -1,10 +1,67 @@
 .artist-page {
     @include display-grid;
     @include menu-right;
+    @include subscribes;
 
     main {
         grid-area: c1;
+        @include search-bar;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 10fr;
+        grid-template-areas: "a1 a2 a3"
+                             "a4 a5 a5";
+        margin-top: 15vh;
+        font-family: $font;
+        font-size: $font-p;
+        @include no-style-link;
+
+
+        //search col style
+        .col-search {
+            grid-area: a1;
+        }
+
+        //recent style
+        .recent{
+            grid-area: a2;
+        }
+        .recent h2 {
+            margin: 0;
+        }
+
+
+        //name date style
+        .name-date {
+            margin: 0;
+            grid-area: a5;
+            display: flex;
+        }
+         .name-date li{
+            list-style-type: none;
+            margin-bottom: 5vh;
+        }
+        .name-li a {
+            @include no-style-link;
+            margin-bottom: 5vh;
+        }
+        .artist-name{
+            padding: 0;
+            margin-top: 0;
+            margin-right: 15vw;
+        }
+        .date-li a {
+            @include no-style-link;
+            margin-bottom: 5vh;
+        }
+
+    
+
+
     }
+
+
+
 
 
 }

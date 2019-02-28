@@ -2,8 +2,8 @@
     .subscribes-box {
         font-size: $font-p;
         font-weight: bold;  
-        position: absolute;
-        top: 90vh;
+        position: fixed;
+        bottom: 5vh;
         right: 0vw;
         @include no-style-link;
         padding: 0;
