@@ -4,6 +4,67 @@
 
 
     main {
+        margin-left: 3vw;
+        margin-top: 2vw;
         grid-area: c1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:"i1 i1 i2"
+                             "i1 i1 i3"
+                             "i1 i1 i7"
+                             "i4 i4 i4"
+                             "i4 i4 i4"
+                             "i5 i6 i6"
+                             "i5 i6 i6";
+        grid-gap: 1vw;
+    };
+
+    .im1{
+        grid-area: i1;
+        
     }
+    .im1 img {
+        @include img-fit;
+    }
+    .im2{
+        grid-area: i2;
+    }
+    .im2 img {
+        @include img-fit;
+    }
+    .im3{
+        grid-area: i3;
+    }
+    .im3 img {
+        @include img-fit;
+    }
+    .im4{
+        grid-area: i4;
+    }
+    .im4 img {
+        @include img-fit;
+    }
+    .im5{
+        grid-area: i5;
+    }
+    .im5 img {
+        @include img-fit;
+    }
+    .im6{
+        grid-area: i6;
+    }
+    .im6 img {
+        @include img-fit;
+    }
+    .im7{
+        grid-area: i7;
+    }
+    .im7 img {
+        @include img-fit;
+    }
+   
+
+
+
 }
