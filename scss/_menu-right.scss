@@ -15,6 +15,7 @@
             text-align: right;
             display: block;
             position: relative;
+            margin-bottom: 5vh;
             
         }
         .menu-li {
@@ -23,23 +24,11 @@
             font-weight: bold;
             display: inline;
         }
+        .menu-li a{
+            margin: 2vh 0 0 0;
+        }
+
         
-        .subscribes-box {
-            font-size: $font-p;
-            font-weight: bold;  
-            position: absolute;
-            top: 90vh;
-            right: 0vw;
-            @include no-style-link;
-            padding: 0;
-        }
-        .subscribes-box a {
-            margin: 0;
-            color: white;
-            display: block;
-            padding: 0 2vw 0 2vw;
-            background-color: #060708;
-        }
 }
 
 @mixin display-grid {
@@ -49,6 +38,6 @@
         grid-template-areas: "c1 c1 c1 c2";
         font-family: $font;
         color: #060708;
-    
 }
+
 

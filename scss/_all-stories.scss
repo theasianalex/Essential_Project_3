@@ -1,6 +1,7 @@
 .all-stories {
     @include display-grid;
     @include menu-right;
+    @include subscribes;
 
 
     main {
@@ -8,8 +9,8 @@
         margin-top: 2vw;
         grid-area: c1;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-rows: repeat(7, 1fr);
         grid-template-areas:"i1 i1 i2"
                              "i1 i1 i3"
                              "i1 i1 i7"

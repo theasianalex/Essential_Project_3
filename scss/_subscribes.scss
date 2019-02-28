@@ -1,0 +1,18 @@
+@mixin subscribes {
+    .subscribes-box {
+        font-size: $font-p;
+        font-weight: bold;  
+        position: absolute;
+        top: 90vh;
+        right: 0vw;
+        @include no-style-link;
+        padding: 0;
+    }
+    .subscribes-box a {
+        margin: 0;
+        color: white;
+        display: block;
+        padding: 1vh 2vw 1vh 2vw;
+        background-color: #060708;
+    }
+}

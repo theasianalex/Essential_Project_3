@@ -1,0 +1,10 @@
+.artist-page {
+    @include display-grid;
+    @include menu-right;
+
+    main {
+        grid-area: c1;
+    }
+
+
+}
