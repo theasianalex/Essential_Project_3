@@ -1,69 +1,86 @@
 // Layout for mobile
 
-.wrapper {
+.collectors {
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+    margin: $margin-all-around;
+
+    .button {
+        @include no-mar-pad;
+        display: block;
+        background-color: $button-color;
+        color: $text-color-light;
+    }
 
     header {
         width: 100%;
+        height: 100%;
         text-align: right; 
-
-        .button {
-            color: $button-color;
-        }
+        display: none;       
     }
 
     
 
     main {
         width: 100%;
+        height: 100%;
+        display: block;
         
-
-        .collectors-img {
-            display: block;
+        section {
             position: relative;
-        }
 
-        .prev {
-            position: absolute;
-            top: 50%;
-            left: 1%;
-            color: $text-color-light;
-        }
+            .collectors-img {
+                display: block;
+                margin-bottom: ($margin-p * 3);
+            }
 
-        .next {
-            position: absolute;
-            top: 50%;
-            right: 1%;
-            color: $text-color-light;
+            .prev {
+                position: absolute;
+                top: -2%;
+                left: 1%;
+                color: $text-color-light;
+                font-weight: bold;
+            }
+
+            .next {
+                position: absolute;
+                top: -2%;
+                right: -1%;
+                //color: $text-color-light;
+                color: red;
+                font-weight: bold;
+            }
         }
     }
     
+    @include subscribes-style;
 
-    footer {
-        display: block;
-        float: right;
+
+
+
+    // Layout - for desktop 
+
+
+
+    @include desktop {
+
+        .btn-menu {
+            display: none;
+        }
+        @include display-grid;
+        @include menu-right;
+
+        header {
+
+        }
+
+
+        main {
+            grid-area: c1;
+        }
+
     }
 
-
 }
-
-
-
-// Layout - for desktop 
-
-
-@include desktop {
-
-    @include display-gird;
-    @include menu-right;
-
-
-    main {
-        grid-area: c1;
-    }
-
-}
-
-

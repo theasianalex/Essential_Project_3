@@ -7,6 +7,32 @@
 
 
 
+// subscribes style, for mobile calling
+
+@mixin subscribes-style {
+    .subscribes-box {
+        font-size: $font-p;
+        font-weight: bold;  
+        position: absolute;
+        top: 90vh;
+        right: 0vw;
+        @include no-style-link;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+    }
+    .subscribes-box a {
+        margin: 0;
+        color: white;
+        display: block;
+        padding: 0 2vw 0 2vw;
+        background-color: #060708;
+    }
+}
+// Rogina did above changes----------------
+
+
+
 // Mixin for centering element
 // with margin-left: auto
 // and margin-right: auto;
@@ -237,3 +263,9 @@ $aspect-ratios: (
     margin: 0;
     padding: 0;
 }
+
+
+
+
+
+
