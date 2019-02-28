@@ -33,7 +33,9 @@
 
             .collectors-img {
                 display: block;
+                
                 margin-bottom: ($margin-p * 3);
+
             }
 
             .prev {
@@ -79,8 +81,61 @@
 
         main {
             grid-area: c1;
-        }
+            
 
+            section {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    text-align: center;
+                    position: absolute;
+                    top: 8%;
+                    left: 20%;
+                    transform: rotate(90deg);
+                    transform: translate(-50% -50%);
+                    letter-spacing: 8px;
+
+                a {
+                    @include no-style-link;
+
+                }
+            }
+
+                .prev {
+                    //padding: $margin-all-around;
+                    width: 20%;
+                    position: absolute;
+                    left: 5%;
+                    top: 70%;
+                    color: $text-color;
+                    text-align: right;
+                    border-bottom: 2px solid black;
+                    padding: $margin-all-around 0;
+                }
+
+                .collectors-img {
+                    width: 56%;
+                    height: auto;
+                    display: block;
+                    object-fit: cover;
+                    margin: 0 auto;
+                    position: relative;
+                    text-align: center;
+                }
+
+                .next {
+                    width: 20%;
+                    position: absolute;
+                    left: 75%;
+                    top: 20%;
+                    color: $text-color;
+                    text-align: left;
+                    border-bottom: 2px solid black;
+                    padding: $margin-all-around 0;
+                }
+            }
+        }
     }
 
 }
