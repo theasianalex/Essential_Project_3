@@ -5,7 +5,11 @@
     }
 }
 
-
+@mixin tablet {
+    @media (min-width: 500px) {
+        @content;
+    }
+}
 
 // subscribes style, for mobile calling
 // Rogina did above changes----------------
