@@ -24,7 +24,8 @@ $margin-all-around: 4vw;
 $margin-p: 4vw;
 
 
-
+// Link Selector
+$link-hover-selector: '&:hover, &:focus, &:active';
 
 
 
@@ -81,34 +82,6 @@ $hover: '&:hover, &:focus, &:active';
 
 
 
-
-
-
-//colors
-
-$button-color: #060708;
-
-$text-color: #060708;
-
-$text-box-color: #bfbfbf;
-
-//font family
-
-$font: 'Merriweather', Times, Times New Roman, serif;
-
-//font size
-$font-h1: 6vw;
-$font-h2: 4vw;
-$font-h3: 2vw;
-$font-p:  1.5vw;
-
-//layout
-
-$margin-all-around: 1vw;
-$margin-p: 1vw;
-
-// Link Selector
-$link-hover-selector: '&:hover, &:focus, &:active';
 
 
 

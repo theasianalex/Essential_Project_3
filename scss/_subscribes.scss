@@ -18,9 +18,14 @@
 }
 
 @mixin subscribes-mobile {
+    text-align: center;
     .subscribes-box {
-        font-size: $font-p;
-        font-weight: bold;  
+        // font-size: $font-p;
+        font-size: 0.7em;
+        font-weight: bold;
+        position: absolute;
+        bottom: -5%;;
+        right: -2%;;
         @include no-style-link;
         padding: 0;
 
@@ -29,6 +34,7 @@
             color: white;
             display: block;
             width: 100px;
+            float: right;
             
             // padding: 1vh 2vw;
             background-color: #060708;
