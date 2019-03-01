@@ -50,9 +50,12 @@
             margin-top: 0;
             margin-right: 15vw;
         }
+        .artist-date {
+            margin-top: 0;
+        }
         .date-li a {
             @include no-style-link;
-            margin-bottom: 5vh;
+            margin-top: 0;
         }
 
     

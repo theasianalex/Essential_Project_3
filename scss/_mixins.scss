@@ -282,11 +282,12 @@ $aspect-ratios: (
         color:#060708;
         border-color: #060708;
         outline: none;
+      }
 }
+//text style
+
+@mixin article-style {
+    font-size: $font-p;
+    line-height: 7vh;
+
 }
-
-
-
-
-
-
