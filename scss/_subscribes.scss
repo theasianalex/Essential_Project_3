@@ -16,3 +16,24 @@
         background-color: #060708;
     }
 }
+
+@mixin subscribes-mobile {
+    .subscribes-box {
+        font-size: $font-p;
+        font-weight: bold;  
+        @include no-style-link;
+        padding: 0;
+
+        a {
+            // margin: 0 3vw 0 0;
+            color: white;
+            display: block;
+            width: 100px;
+            
+            // padding: 1vh 2vw;
+            background-color: #060708;
+        } // End a 
+
+    } // End subscribes-box
+    
+} // End subscribes-mobile

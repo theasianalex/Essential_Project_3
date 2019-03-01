@@ -1,13 +1,8 @@
 // nav on the right
 
 nav {
-    // locally scoped variable
-    $height: 40px;
 
-    background-color: $brand-color;
-    height: $height;
-    padding: $padding;
-    
+    $height: 30px;
     
     ul {
         @include flatten;
@@ -15,16 +10,16 @@ nav {
     }
 
     li {
-        flex: 1;
-        float: right;
+        // flex: 1;
+        // float: right;
     }
 
     a {
         display: block;
-        color: $text-color;
+        color: $text-color-light;
         line-height: $height;
-        text-align: right;
-        font-size: 1.3em;
+        text-align: center;
+        font-size: 1.5em;
         text-decoration: none;
         outline: none;
 
@@ -33,5 +28,5 @@ nav {
         }
 
 
-    }
-}
+    } // End a 
+} // End nav

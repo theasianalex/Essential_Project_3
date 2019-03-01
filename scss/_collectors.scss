@@ -1,26 +1,27 @@
 // Layout for mobile
 
 .collectors {
-    display: block;
+    @include no-mar-pad;
+    // display: block;
     width: 100%;
     height: 100%;
     margin: $margin-all-around;
 
-    .button {
-        @include no-mar-pad;
+
+    .btn-menu {    
         display: block;
         background-color: $button-color;
         color: $text-color-light;
+        font-weight: bold;
+        width: 70px;
+        height: 30px;
     }
 
     header {
-        width: 100%;
         height: 100%;
         text-align: right; 
         display: none;       
     }
-
-    
 
     main {
         width: 100%;
@@ -32,6 +33,29 @@
 
             h2 {
                 text-align: center;
+
+                a {
+                    @include no-style-link;
+                }
+            }
+
+            .prev {
+                position: absolute;
+                top: 1%;
+                left: 1%;
+                color: $text-color-blue;
+                font-weight: bold;
+                display: inline-block;
+            }
+
+            .next {
+                position: absolute;
+                top: 1%;
+                right: 1%;
+                color: $text-color-blue;
+                font-weight: bold;
+                display: inline-block;
+                margin-right: 5px;
             }
 
             .collectors-img {
@@ -39,28 +63,14 @@
                 text-align: center;
                 margin-bottom: ($margin-p * 3);
 
-            }
+            }    
 
-            .prev {
-                position: absolute;
-                top: -2%;
-                left: 1%;
-                color: $text-color-light;
-                font-weight: bold;
-            }
+        } // End section - mobile
 
-            .next {
-                position: absolute;
-                top: -2%;
-                right: -1%;
-                //color: $text-color-light;
-                color: red;
-                font-weight: bold;
-            }
-        }
-    }
+    } // End main - mobile
     
-    @include subscribes;
+    // For mobile
+    @include subscribes-mobile;
 
 
 
@@ -91,7 +101,7 @@
                     text-align: center;
                     position: absolute;
                     top: 0;
-                    left: 28%;
+                    left: 31%;
                     letter-spacing: 14px;
                     z-index: 1;
                     width: 30px;
@@ -117,7 +127,7 @@
                     //padding: $margin-all-around;
                     width: 22%;
                     position: absolute;
-                    right: 3%;
+                    left: 3%;
                     top: 70%;
                     color: $text-color-blue;
                     text-align: right;
@@ -126,14 +136,20 @@
                     z-index: 1
                 }
 
-                .collectors-img {
+                .collectors-img-container {
+                    margin: 0 auto;
                     width: 56%;
+                    overflow: hidden;
+                }
+
+                .collectors-img {
+                    width: 100%;
                     height: auto;
                     display: block;
                     object-fit: cover;
-                    margin: 0 auto;
-                    position: relative;
-                    text-align: center;
+                    
+                    // position: relative;
+                    // text-align: center;
                 }
 
                 .next {
