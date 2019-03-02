@@ -5,8 +5,7 @@
     // display: block;
     width: 100%;
     height: 100%;
-    //margin: $margin-all-around;
-    margin: 10px 0 0 10px;
+    margin: $margin-all-around;
 
 
     .btn-menu {    
@@ -41,7 +40,7 @@
 
             .prev {
                 position: absolute;
-                top: 7.5%;
+                top: 1%;
                 left: 1%;
                 color: $text-color-blue;
                 font-weight: bold;
@@ -51,7 +50,7 @@
 
             .next {
                 position: absolute;
-                top: 7.5%;
+                top: 1%;
                 right: 1%;
                 color: $text-color-blue;
                 font-weight: bold;
@@ -60,18 +59,17 @@
             }
 
             .collectors-img-container {
-                display: block;
-                
+                position: relative;
+                margin-bottom: 10px;        
+
                 .collectors-img {
-                    position: relative;
                     display: block;
-                    text-align: center;  
+                    text-align: center;
+                    //margin-bottom: ($margin-p * 3);
+                    
                 }    
 
                 @include subscribes-mobile;
-                .subscribes-box {
-                    float: right;
-                }
 
             } // End collectors-img-container
 
@@ -133,7 +131,6 @@
 
 
     @include desktop {
-        margin: 30px;
 
         .btn-menu {
             display: none;
