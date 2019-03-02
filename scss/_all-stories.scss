@@ -5,8 +5,8 @@
 
 
     main {
-        margin-left: 3vw;
-        margin-top: 2vw;
+        margin-left: 5%;
+        margin-top: 5%;
         grid-area: c1;
         display: grid;
         grid-template-columns: repeat(3, 3fr);
@@ -18,7 +18,7 @@
                              "i4 i4 i4"
                              "i5 i6 i6"
                              "i5 i6 i6";
-        grid-gap: 1vw;
+        grid-gap: 2%;
     };
 
     .im1{

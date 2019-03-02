@@ -1,0 +1,24 @@
+.fairs {
+    @include display-grid;
+    @include menu-right;
+    @include subscribes;
+    font-family: $font;
+
+    main{
+        grid-area: c1;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "f1 f2";
+        grid-gap: 5px;
+        margin-top: 5%;
+
+        .h2{
+            grid-area: f1;
+        }
+        section {
+            grid-area: f2;
+            @include article-style;
+        }
+    }
+}

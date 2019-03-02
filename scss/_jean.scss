@@ -10,12 +10,12 @@
         margin-bottom: 10%;
 
 
-    h2 {
+        h2 {
         margin-left: 3vw;
         font-size: $font-h2;
-    }
+        }
 
-    .inter-question {
+        .inter-question {
         font-weight: bold;
         font-style: italic;
         font-size: $font-h3;
@@ -23,28 +23,29 @@
         margin-right: 10vw;
         margin-top: 0;
         margin-bottom: 0;
-    }
-    p {
+        line-height: 200%;
+        }
+        p {
         @include article-style;
         margin-left: 10vw;
         margin-right: 10vw;
         
-    }
-    .J-img-top img {
+        }
+        .J-img-top img {
         transform: scale(1.1);
-    }
+            }
 
-    .J-img {
+        .J-img {
         margin-left: 10vw;
         margin-right: 10vw;
         
-    }
-    .J-img img {
+        }
+        .J-img img {
         width: 80%;
         height: 80%;
         margin-top: 5vh;
         margin-bottom: 5vh;
-    }
+        }
 
     }
 }

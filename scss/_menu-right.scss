@@ -2,11 +2,12 @@
     
         header {
             grid-area: c2;
-            margin-right: 3vw;
+            margin-right: 2%;
             position: fixed;
             right: 0;
             top: 0;
             display: block;
+            z-index: 1;
         }
         header  h1 a {
             //@include transform;
@@ -15,16 +16,22 @@
             text-align: right;
             display: block;
             position: relative;
-            margin-bottom: 2vh;
+            
             
         }
         .menu-li {
+            text-align: right;
+            float: right;
+            list-style: none;
             padding: 0; 
-            font-size: $font-p;
+            font-size: $font-h3;
             font-weight: bold;
         }
+        .menu-li li{
+            margin-bottom: 20%;
+        }
         .menu-li a{
-            margin: 1% 0 0 0;
+            @include no-style-link;
         }
 
         

@@ -3,17 +3,17 @@
         font-size: $font-p;
         font-weight: bold;  
         position: fixed;
-        bottom: 5vh;
+        bottom: 2%;
         right: 0vw;
-        @include no-style-link;
+        
         padding: 0;
     }
     .subscribes-box a {
         margin: 0 3vw 0 0;
-        color: white;
         display: block;
         padding: 1vh 2vw 1vh 2vw;
         background-color: #060708;
+        @include no-style-link(white);
     }
 }
 
@@ -24,8 +24,8 @@
         font-size: 0.7em;
         font-weight: bold;
         position: absolute;
-        bottom: -5%;;
-        right: -2%;;
+        bottom: -2%;
+        right: -2%;
         @include no-style-link;
         padding: 0;
 

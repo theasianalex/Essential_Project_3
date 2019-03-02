@@ -221,9 +221,9 @@ $aspect-ratios: (
 
 //link
 
-@mixin no-style-link {
+@mixin no-style-link($color: #060708) {
     text-decoration: none;
-    color: #060708;
+    color: $color;
 }
 
 //logo landing subscribes page
@@ -292,6 +292,6 @@ $aspect-ratios: (
 
 @mixin article-style {
     font-size: $font-p;
-    line-height: 7vh;
+    line-height: 200%;
 
 }
