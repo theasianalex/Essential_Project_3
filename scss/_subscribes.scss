@@ -3,41 +3,53 @@
         font-size: $font-p;
         font-weight: bold;  
         position: fixed;
-        bottom: 2%;
-        right: 0vw;
-        
-        padding: 0;
-    }
-    .subscribes-box a {
-        margin: 0 3vw 0 0;
-        display: block;
-        padding: 1vh 2vw 1vh 2vw;
-        background-color: #060708;
-        @include no-style-link(white);
-    }
-}
-
-@mixin subscribes-mobile {
-    text-align: center;
-    .subscribes-box {
-        // font-size: $font-p;
-        font-size: 0.7em;
-        font-weight: bold;
-        position: absolute;
-        bottom: -2%;
-        right: -2%;
-        @include no-style-link;
+        bottom: 5%;
+        right: 0;
+        width: 150px;
+        text-align: center;
         padding: 0;
 
         a {
-            // margin: 0 3vw 0 0;
-            color: white;
+            margin-right: 30px;
+            display: block;
+            padding: 1vh 2vw 1vh 2vw;
+            background-color: $button-color;
+            @include no-style-link(white);
+        } // End a
+    
+    } // End .subscribes-box
+
+} // End subscribes
+
+@mixin subscribes-mobile {
+
+    .subscribes-box {
+        font-size: 0.7em;
+        font-weight: bold;
+        display: block;
+        list-style: none;
+        @include no-style-link;
+
+        ul {
+            @include flatten;
+            list-style: none;
+        }
+
+        a {
+            color: $text-color-light;
             display: block;
             width: 100px;
-            float: right;
-            
-            // padding: 1vh 2vw;
+            line-height: $line-height;
+            text-align: center;  
             background-color: #060708;
+            font-size: 1.3em;
+            outline: none;
+            text-decoration: none;
+
+            #{ $link-hover-selector } {
+                background-color: rgba(black, 0.3);
+            }
+ 
         } // End a 
 
     } // End subscribes-box

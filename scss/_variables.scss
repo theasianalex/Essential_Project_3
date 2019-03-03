@@ -33,29 +33,17 @@ $link-hover-selector: '&:hover, &:focus, &:active';
 
 // -------
 $bg-body-color: white;
+
 $phone: em(640);
+$desktopMedium: em(1250);
 $line-height: 30px;
 
 // Layout Variables
 $padding: 30px;
+$margin: 30px;
+$padding-top-bottom: 10px 0;
 // Grid Variables
 $gutter: 2;
-
-
-// Function to determine column width
-// takes two numerical parameters:
-// $c -> the number of columns in a row
-// $g -> the gutter amount
-@function colWidth($c, $g: 2){
-    @return ((100 - $g * ($c - 1)) / $c) * 1%;
-}
-
-$one-col: 100%;
-$two-col: colWidth(2);
-$three-col: colWidth(3);
-$four-col: colWidth(4);
-$five-col: colWidth(5);
-$six-col: colWidth(6);
 
 
 // Function to
@@ -65,20 +53,11 @@ $six-col: colWidth(6);
 }
 
 // Media Query Breakpoints
-$desktopMedium: em(1250);
 $tabletLandscape: em(1024);
 $tabletPortrait: em(850);
 $phoneLandscape: em(670);
 $phonePortrait: em(420);
 
-
-// Media Query Breakpoints
-$tablet: em(1024);
-$phone: em(640);
-
-
-// Hover selector
-$hover: '&:hover, &:focus, &:active';
 
 
 

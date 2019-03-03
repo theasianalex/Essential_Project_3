@@ -1,15 +1,15 @@
 // Header styles
-header {
-    background-color: $brand-color;
-    padding: $padding $padding*2;
-    @include flex-layout-row;
-    @include flex-layout-column;  
+// header {
+//     background-color: $brand-color;
+//     padding: $padding $padding*2;
+//     @include flex-layout-row;
+//     @include flex-layout-column;  
 
-    h1 {
-        @include flatten;
-        color: $text-color;
-        @media (max-width: $phoneLandscape){
-            font-size: 1.6em;
-        }
-    }
-}
+//     h1 {
+//         @include flatten;
+//         color: $text-color;
+//         @media (max-width: $phoneLandscape){
+//             font-size: 1.6em;
+//         }
+//     }
+// }

@@ -5,13 +5,24 @@
     }
 }
 
+
+
 @mixin tablet {
-    @media (min-width: 500px) {
+    @media (min-width: $phone) and (max-width: $desktopMedium) {
         @content;
     }
 }
 
-// subscribes style, for mobile calling
+
+
+
+//object fit
+@mixin img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 // Rogina did above changes----------------
 
 
@@ -36,47 +47,8 @@
     line-height: 1;
 }
 
-// Visually hide an element but
-// still make it accessible to 
-// a screen reader
-@mixin visually-hidden {
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
-}
 
-// Clear margins
-@mixin first-last-el-no-margin {
-    > :first-child {
-        margin-top: 0;
-    }
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
 
-@mixin first-el-no-margin {
-    > :first-child {
-        margin-top: 0;
-    }
-}
-
-@mixin last-el-no-margin {
-    :last-child {
-        margin-bottom: 0;
-    }
-}
-
-// Mixin for setting foreground
-// images to cover their container
-// without distortion of the 
-// image
-// using object-fit cover
 @mixin img-cover($abs-pos: true){
     @if($abs-pos){
         position: absolute;
@@ -89,43 +61,10 @@
     display: block;
 }
 
-// Mixin for having an element
-// sit on top of another and
-// and cover the parent element
-// completely
-@mixin el-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-// Mixin to set links
-// to not have their
-// default look
-@mixin plain-link($c: white){
-    text-decoration: none;
-    color: $c;
-}
-
-// Function to set text-color to
-// a light colour or a dark
-// colour depending on the 
-// provided background color;
-@function contrast-text-color($bgc, $ltc: white, $dtc: black){
-    @if(lightness($bgc) > 50){
-        @return $dtc; // lighter background
-    } @else {
-        @return $ltc; // darker background 
-    }
-}
 
 // Layout Mixins
 
-// Mixins for creating a flex row of
-// and evenly spacing out the
-// elements along the row
+
 @mixin flex-layout-row {
     display: flex;
     justify-content: space-between;
@@ -191,24 +130,6 @@ $aspect-ratios: (
 
 }
 
-// Placeholder styles
-// Similar to mixins but without
-// parameters
-%row-item {
-    width: $two-col;
-    padding: $padding;
-    @include first-last-el-no-margin;
-    border: 1px dotted #ccc;
-    @media (max-width: $phoneLandscape){
-        width: $one-col;
-        margin-bottom: 8%;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-
 
 
 
@@ -247,12 +168,7 @@ $aspect-ratios: (
     padding: 0;
 }
 
-//object fit
-@mixin img-fit {
-    width: 100%;
-    height: 100%;
-     object-fit: cover;
-}
+
 
 //search bar 
 
