@@ -6,13 +6,16 @@
         bottom: 5%;
         right: 0;
         width: 150px;
-        text-align: center;
         padding: 0;
+        margin-right: 30px;
+
 
         a {
             margin-right: 30px;
             display: block;
-            padding: 1vh 2vw 1vh 2vw;
+            padding: 1vh 2vw;
+            text-align: center;
+            margin: 0 auto;
             background-color: $button-color;
             @include no-style-link(white);
         } // End a

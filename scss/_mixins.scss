@@ -1,19 +1,101 @@
 // Mixin for media query
-@mixin desktop {
-    @media (min-width: $desktopMedium) {
-        @content;
-    }
-}
-
-
-
 @mixin tablet {
     @media (min-width: $phone) and (max-width: $desktopMedium) {
         @content;
     }
 }
 
+@mixin phone {
+    @media (max-width: $phone) {
+        @content;
+    }
+}
 
+
+//--------------------------------------
+    // For desktop
+    @mixin flex-layout-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    @mixin collectors-h2 {
+        h2 {
+            text-align: center;
+            position: absolute;
+            top: 1%;
+            left: 23%;
+            letter-spacing: 14px;
+            z-index: 2;
+            width: 30px;
+            margin-top: 0;
+
+            .first-name,
+            .last-name {    
+                display: inline-block;
+                word-wrap: break-word;
+                width: 100%;
+            }
+
+            .first-name {
+                margin-bottom: 20px;
+            }
+
+            a {
+                @include no-style-link;  
+            }
+        }
+    }
+
+    @mixin collectors-prev-tablet-desktop {
+        .prev {
+            width: 18%;
+            position: absolute;
+            left: 3%;
+            top: 60%;
+            color: $text-color-blue;
+            text-align: right;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            z-index: 1
+        }
+    }
+
+    @mixin collectors-next-tablet-desktop {
+        .next {
+            width: 18%;
+            position: absolute;
+            left: 54%;
+            top: 20%;
+            color: $text-color-blue;
+            text-align: left;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            z-index: 1;
+        }
+    }
+
+    @mixin collectors-image-box {
+        .collectors-img-container {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 60%;
+
+            .collectors-img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+                position: relative;
+                text-align: center;
+                @include img-fit;
+            }
+
+            @include subscribes;
+        }
+    }
 
 
 //object fit
@@ -65,11 +147,7 @@
 // Layout Mixins
 
 
-@mixin flex-layout-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 
 // Center elements in a flex
 // container
