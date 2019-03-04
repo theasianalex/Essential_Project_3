@@ -1,49 +1,49 @@
- @mixin menu-right {
+@mixin menu-right {
     
-        header {
-            grid-area: c2;
-            margin-right: 2%;
-            position: fixed;
-            right: 0;
-            top: 0;
-            display: block;
-            z-index: 1;
-        }
-        header  h1 a {
-            //@include transform;
-            @include no-style-link;
-            @include essential-other;
-            text-align: right;
-            display: block;
-            position: relative;
-            
-            
-        }
-        .menu-li {
-            text-align: right;
-            float: right;
-            list-style: none;
-            padding: 0; 
-            font-size: $font-h3;
-            font-weight: bold;
-        }
-        .menu-li li{
-            margin-bottom: 20%;
-        }
-        .menu-li a{
-            @include no-style-link;
-        }
-
+    header {
+        grid-area: c2;
+        margin-right: 2%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: block;
+        z-index: 1;
+    }
+    header  h1 a {
+        //@include transform;
+        @include no-style-link;
+        @include essential-other;
+        text-align: right;
+        display: block;
+        position: relative;
         
+        
+    }
+    .menu-li {
+        text-align: right;
+        float: right;
+        list-style: none;
+        padding: 0; 
+        font-size: $font-h3;
+        font-weight: bold;
+    }
+    .menu-li li{
+        margin-bottom: 20%;
+    }
+    .menu-li a{
+        @include no-style-link;
+    }
+
+    
 }
 
 @mixin display-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "c1 c1 c1 c2";
-        font-family: $font;
-        color: #060708;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "c1 c1 c1 c2";
+    font-family: $font;
+    color: #060708;
 }
 
 

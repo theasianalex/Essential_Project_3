@@ -6,42 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Josh Jack Page</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
-<div class="wrapper">
+<div class="collectors josh-jack">
+    <a href="mobile-manu.html"><button id="btn-menu" class="btn-menu" type="button">Menu</button></a>
     <header>
-            <h1>
-                <a href="all-stories.html">Essential</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="all-stories.html">All Stories</a></li>
-                    <li><a href="artists.html">Artists</a></li>
-                    <li><a href="collectors.html">Collectors</a></li>
-                    <li><a href="exhibitions.html">Exhibitions</a></li>
-                    <li><a href="fairs.html">Fairs</a></li>
-                    <li><a href="contacts.html">Contacs</a></li>
-                </ul>
-            </nav>
+            <h1><a href="all-stories.html">Essential</a></h1>
+            
+            <ul id="menu-li" class="menu-li">
+                <li><a href="all-stories.html">All Stories</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="collectors.html">Collectors</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="fairs.html">Fairs</a></li>
+                <li><a href="contacts.html">Contacs</a></li>
+            </ul>
+            
     </header>
     <main>
         <section>
-            <a href="images/Josh_Jack.jpeg"><img src="#" alt=""></a>
+            <a href="Josh_Jack.html"><img src="images/Josh_Jack.jpeg" alt="Josh Jack"></a>
             <h2>
                 <a href="Josh-Jack.html">Josh Jack</a>
             </h2>
-            <p>Previous Post</p>
             <p>
                 “Valuable things are born in silence” as Michał Borowik explains why he is constantly enchanted by emerging artists. He set up the publicly accessible Borowik Collection in 2005, which was ranked as one of the “fifty most interesting collections assembled by people under fifty” in American magazine Modern Painters. If collecting is one form of creation as Michał Borowiks sees it, then his stylish and attractive Instagram profile is probably another.
             </p>
-            <p>Next Post</p>
-        </section>
+            <div class="prev-next">
+                <p id="prev" class="prev">Previous Post</p>
+                <p id="next" class="next">Next Post</p>
+            </div>
     </main>
     <footer class="subscribes">
         <a href="subscribes.html"><p>Subscribes</p><a>
     </footer>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="./script/script.js"></script>
+
 
 </body>
 </html>

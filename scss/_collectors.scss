@@ -1,11 +1,99 @@
 // Layout for Collectors
 
+// Slide show for photos
+
+
+//--------------------------------------
+    // For desktop
+    @mixin flex-layout-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    @mixin collectors-h2 {
+        h2 {
+            text-align: center;
+            position: absolute;
+            top: 1%;
+            left: 23%;
+            letter-spacing: 14px;
+            z-index: 2;
+            width: 30px;
+            margin-top: 0;
+
+            .first-name,
+            .last-name {    
+                display: inline-block;
+                word-wrap: break-word;
+                width: 100%;
+            }
+
+            .first-name {
+                margin-bottom: 20px;
+            }
+
+            a {
+                @include no-style-link;  
+            }
+        }
+    }
+
+    @mixin collectors-prev-tablet-desktop {
+        .prev {
+            width: 18%;
+            position: absolute;
+            left: 3%;
+            top: 60%;
+            color: $text-color-blue;
+            text-align: right;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            z-index: 1
+        }
+    }
+
+    @mixin collectors-next-tablet-desktop {
+        .next {
+            width: 18%;
+            position: absolute;
+            left: 54%;
+            top: 20%;
+            color: $text-color-blue;
+            text-align: left;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            z-index: 1;
+        }
+    }
+
+    @mixin collectors-image-box {
+        .collectors-img-container {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 60%;
+
+            .collectors-img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+                position: relative;
+                text-align: center;
+                @include img-fit;
+            }
+
+            @include subscribes;
+        }
+    }
+
+
+
+
 .collectors {
 
     // Layout - for desktop 
-
-        
-
         .btn-menu {
             display: none;
         }
@@ -28,142 +116,102 @@
 
         } // Main end
 
-    } //Desktop end
+} //Desktop end
 
 
+@mixin display-grid-phone-tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "c2 c1 c1 c1";
+}
     
+// Tablet and Mobile begins
 
-    
-    
+.collectors {
 
-
-
-    //For Tablet
-    
-    @include tablet {
-
-        margin: $margin;
-
-        .btn-menu {
-            display: none;
-        }
-
-        @include display-grid;
-        @include menu-right;
-        
-        
-        main {
-            grid-area: c1;
-            
-            section {
-                @include flex-layout-row;
-
-                .collectors-img-container {
-                    
-                    @include collectors-image-box;
-
-                    @include collectors-h2;
-
-                }
-
-                @include collectors-prev-tablet-desktop;
-                // .prev {    
-                //         width: 15%; 
-                // }
-                
-
-                @include collectors-next-tablet-desktop;
-
-            } // Section end
-
-        } // Main end
-
-    } //Tablet end
-
-
-    
-    // Mobile begins
-    @include phone {
-    @include no-mar-pad;
-    // display: block;
-    width: 100%;
-    height: 100%;
-    //margin: $margin-all-around;
-    margin: 10px 0 0 10px;
-
-
-    .btn-menu {    
+    @include breakpoint {
+        // @include display-grid-phone-tablet;
         display: block;
-        background-color: $button-color;
-        color: $text-color-light;
-        font-weight: bold;
-        width: 70px;
-        height: 30px;
-    }
-
-    header {
-        height: 100%;
-        text-align: right; 
-        display: none;       
-    }
-
-    main {
+        float: left;
+    
+        @include no-mar-pad;
         width: 100%;
         height: 100%;
-        display: block;
-        
-        section {
+        margin-top: 10px;
 
-            h2 {
-                text-align: center;
 
-                a {
-                    @include no-style-link;
+        .btn-menu {    
+            display: block;
+            background-color: $button-color;
+            color: $text-color-light;
+            font-weight: bold;
+            width: 70px;
+            height: 30px;
+            margin-left: 10px;
+            float: left;
+        }
+
+        header {
+            height: 100%;
+            text-align: right; 
+            display: none;       
+        }
+
+        main {
+            
+            section {
+
+                h2 {
+                    text-align: center;
+
+                    a {
+                        @include no-style-link;
+                    }
                 }
-            }
 
-            .prev {
-                position: absolute;
-                top: 7.5%;
-                left: 1%;
-                color: $text-color-blue;
-                font-weight: bold;
-                display: inline-block;
-                padding-left: 5px;
-            }
+                .prev {
+                    // position: absolute;
+                    top: 7.5%;
+                    left: 1%;
+                    color: $text-color-blue;
+                    font-weight: bold;
+                    display: inline-block;
+                    padding-left: 5px;
+                }
 
-            .next {
-                position: absolute;
-                top: 7.5%;
-                right: 1%;
-                color: $text-color-blue;
-                font-weight: bold;
-                display: inline-block;
-                padding-right: 5px;
-            }
+                .next {
+                    // position: absolute;
+                    top: 7.5%;
+                    right: 1%;
+                    color: $text-color-blue;
+                    font-weight: bold;
+                    display: inline-block;
+                    padding-right: 5px;
+                }
 
-            .collectors-img-container {
-                display: block;
-                
-                .collectors-img {
-                    position: relative;
+                .collectors-img-container {
                     display: block;
-                    text-align: center;  
-                }    
+                    
+                    .collectors-img {
+                        width: 100%;
+                        // position: relative;
+                        display: block;
+                        text-align: center;  
+                    }    
 
-                @include subscribes-mobile;
-                .subscribes-box {
-                    float: right;
-                }
+                    @include subscribes-mobile;
+                    .subscribes-box {
+                        float: right;
+                        text-align: center;
+                    }
 
-            } // End collectors-img-container
+                } // End collectors-img-container
 
-        } // End section - mobile
+            } // End section - Tablet and Mobile
 
-    } // End main - mobile
+        } // End main - Tablet and Mobile
     
+    }; // End media query
 
-} // Div end
-
-
+} // End collectors - Tablet and Mobile   
 

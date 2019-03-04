@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="collectors">    
-    <a href="mobile-manu.html"><button class="btn-menu" type="button">Menu</button></a>
+    <a href="mobile-manu.html"><button id="btn-menu" class="btn-menu" type="button">Menu</button></a>
     <header>
         <h1><a href="all-stories.html">.Essential</a></h1>
-        <ul class="menu-li">
+        <ul id="menu" class="menu-li">
             <li><a href="all-stories.html">All Stories</a></li>
             
             <li><a href="artists.html">Artists</a></li>
@@ -33,14 +34,16 @@
 
     <main>
         <section>
-            <p class="prev">Previous post</p>
-            <p class="next">Next post</p>
+            <p id="prev" class="prev">Previous post</p>
+            <p id="next" class="next">Next post</p>
             <div class="collectors-img-container">
                 <h2>
                     <a href="Josh-Jack.html"><span class="first-name">Josh</span> <span class="last-name">Jack</span></a>
                 </h2>
                 <div class="collectors-img">
-                    <a href="Josh-Jack.html"><img src="images/Josh_Jack.jpeg" alt="Josh Jack"></a>  
+                    <a href="Josh-Jack.html"><img src="images/Josh_Jack.jpeg" alt="Josh Jack"></a>
+                    <a href="Jean-Bessie-interview.html"><img src="images/Jean_Bessie_collectors.jpg" alt="Jean Bessie"></a>
+                    <a href="David-Ostrowski.html"><img src="images/David_Ostrowski_collectors.jpg" alt="David Ostrowski"></a>
                 </div>
                 <!-- <nav class="subscribes-box">
                     <ul>
@@ -48,10 +51,10 @@
                     </ul>   
                 </nav>               -->
             </div>
-            <footer class="subscribes-box">
-                <a href="subscribes.html">Subscribes</a>
-            </footer>
         </section>
+        <footer class="subscribes-box">
+            <a href="subscribes.html">Subscribes</a>
+        </footer>
     </main>
 
 
@@ -60,6 +63,7 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="./script/script.js"></script>
+
 
 </body>
 </html>
