@@ -1,0 +1,31 @@
+.contact{
+    @include display-grid;
+    @include menu-right;
+    @include subscribes;
+    font-family: $font;
+
+    main {
+        margin-top: 25%;
+        grid-area: c1;
+        display: flex;
+        margin-left: 5%;
+
+        label {
+            font-size: $font-p;
+        }
+        .text {
+            width: 100%;
+            line-height: 5vh;
+            background-color: #bfbfbf;
+            border-width: 0;
+            margin-right: 5px;
+            font-size: $font-p;
+        }
+        .map{
+            width: 30%;
+        }
+        iframe {
+            display: inline;
+        }
+    }
+}

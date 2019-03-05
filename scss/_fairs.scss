@@ -12,9 +12,13 @@
         grid-template-areas: "f1 f2";
         grid-gap: 5px;
         margin-top: 5%;
+        margin-left: 5%;
 
-        .h2{
-            grid-area: f1;    
+        h2{
+            grid-area: f1; 
+            font-size: $font-h3;
+
+            
         }
         section {
             grid-area: f2;
