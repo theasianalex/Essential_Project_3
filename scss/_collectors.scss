@@ -40,70 +40,6 @@
         }
     }
 
-    @mixin collectors-prev-tablet-desktop {
-        .prev {
-            width: 18%;
-            position: absolute;
-            left: 3%;
-            top: 60%;
-            color: $text-color-blue;
-            text-align: right;
-            border-bottom: 2px solid black;
-            padding: $padding-top-bottom;
-            z-index: 1;
-            cursor: pointer;
-        }
-    }
-
-    @mixin collectors-next-tablet-desktop {
-        .next {
-            width: 18%;
-            position: absolute;
-            left: 54%;
-            top: 20%;
-            color: $text-color-blue;
-            text-align: left;
-            border-bottom: 2px solid black;
-            padding: $padding-top-bottom;
-            z-index: 1;
-            cursor: pointer;
-        }
-    }
-
-    @mixin collectors-image-box {
-        .collectors-img-container {
-            margin: 0 auto;
-            //overflow: hidden;
-            width: 60%;
-
-            .collectors-img {
-                //width: 100%;
-                
-                height: auto;
-                display: block;
-                object-fit: cover;
-                position: relative;
-                text-align: center;
-                //@include img-fit;
-                width: 500px;
-                margin: 0 auto;
-                a {
-                    display: block;
-                    width: 100%;
-                }
-                img {
-                    //@include img-fit;
-                    width: 100%;
-                    display: block;
-                }
-            }
-
-            @include subscribes;
-        }
-    }
-
-
-
 
 .collectors {
 
@@ -122,9 +58,6 @@
             section {
                 @include flex-layout-row;
                 @include collectors-h2;
-                @include collectors-prev-tablet-desktop;
-                @include collectors-next-tablet-desktop;
-                @include collectors-image-box;
 
             } // Section end
 
@@ -136,101 +69,17 @@
 
 
 
-@mixin display-grid-phone-tablet {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "c2 c1 c1 c1";
-}
+// @mixin display-grid-phone-tablet {
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr 1fr 1fr 1fr;
+//     grid-template-areas: "c2 c1 c1 c1";
+// }
     
 // Tablet and Mobile begins
 
-.collectors {
 
-    @include breakpoint {
-        @include display-grid-phone-tablet;
-        display: block;
-        float: left;
+
     
-        @include no-mar-pad;
-        width: 100%;
-        height: 100%;
-        margin-top: 10px;
-
-
-        .btn-menu {    
-            display: block;
-            background-color: $button-color;
-            color: $text-color-light;
-            font-weight: bold;
-            width: 70px;
-            height: 30px;
-            margin-left: 10px;
-            float: left;
-        }
-
-        header {
-            height: 100%;
-            text-align: right; 
-            display: none;       
-        }
-
-        main {
-            
-            section {
-
-                h2 {
-                    text-align: center;
-
-                    a {
-                        @include no-style-link;
-                    }
-                }
-
-                .prev {
-                    // position: absolute;
-                    top: 7.5%;
-                    left: 1%;
-                    color: $text-color-blue;
-                    font-weight: bold;
-                    display: inline-block;
-                    padding-left: 5px;
-                }
-
-                .next {
-                    // position: absolute;
-                    top: 7.5%;
-                    right: 1%;
-                    color: $text-color-blue;
-                    font-weight: bold;
-                    display: inline-block;
-                    padding-right: 5px;
-                }
-
-                .collectors-img-container {
-                    display: block;
-                    
-                    .collectors-img {
-                        width: 100%;
-                        // position: relative;
-                        display: block;
-                        text-align: center;  
-                    }    
-
-                    @include subscribes-mobile;
-                    .subscribes-box {
-                        float: right;
-                        text-align: center;
-                    }
-
-                } // End collectors-img-container
-
-            } // End section - Tablet and Mobile
-
-        } // End main - Tablet and Mobile
-    
-    }; // End media query
-
-} // End collectors - Tablet and Mobile 
 
 // Only for the collectors HTML page
 .pg-collectors {
@@ -251,7 +100,7 @@
         .collectors-section {
             display: grid;
             grid-template-columns: 1fr 500px 1fr;
-            grid-column-gap: 20px;
+            grid-column-gap: 40px;
         }
 
         .prev {
@@ -260,6 +109,11 @@
             justify-self: end;
             align-self: center;
             grid-column: 1;
+            color: $text-color-blue;
+            text-align: right;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            cursor: pointer;
         }
 
         .collectors-img-container {
@@ -267,22 +121,43 @@
             grid-column: 2;
             grid-row: 1;
             position: relative;
-            //overflow: auto;
+            margin: 0 auto;
+
+            .collectors-img { 
+                height: auto;
+                display: block;
+                object-fit: cover;
+                position: relative;
+                text-align: center;
+                width: 500px;
+                margin: 0 auto;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+                img {
+                    @include img-fit;
+                    width: 100%;
+                    display: block;
+                }
+            }
         }
-
-
 
         .next {
             position: static;
             grid-column: 3;
             width: 80%;
             align-self: center;
+            color: $text-color-blue;
+            text-align: left;
+            border-bottom: 2px solid black;
+            padding: $padding-top-bottom;
+            cursor: pointer;
         }
 
         .collector-name {
             position: absolute;
-            left: -29px;
-            
+            left: -29px;  
         }
 
         .mobile-menu-button-container {
@@ -290,8 +165,95 @@
         }
 
 
-    }
+        @media (max-width: 768px) {
+            display: block;
+            // display: grid;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: ;
+        
+            @include no-mar-pad;
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+    
+            .btn-menu {    
+                display: block;
+                background-color: $button-color;
+                color: $text-color-light;
+                font-weight: bold;
+                width: 70px;
+                height: 30px;
+                margin-left: 10px;
+                float: left;
+            }
+    
+            header {
+                height: 100%;
+                text-align: right; 
+                display: none;       
+            }
+    
+            main {
+                
+                section {
+    
+                    h2 {
+                        text-align: center;
+    
+                        a {
+                            @include no-style-link;
+                        }
+                    }
+    
+                    .prev {
+                        color: $text-color-blue;
+                        font-weight: bold;
+                        display: block;
+                        text-align: left;
+                        width: 100px;
+                        position: absolute;
+                        left: 8%;
+                        bottom: 10%;
+                    }
+    
+                    .next {
+                        color: $text-color-blue;
+                        font-weight: bold;
+                        display: inline-block;
+                        text-align: right;
+                        width: 100px;
+                        position: absolute;
+                        right: 8%;
+                        bottom: 10%;
+                    }
+    
+                    .collectors-img-container {
+                        display: block;
+                        // position: relative;
+                        
+                        .collectors-img {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            display: block;
+                            text-align: center;  
+                        }    
+    
+                        @include subscribes-mobile;
+                        .subscribes-box {
+                            float: right;
+                            text-align: center;
+                        }
+    
+                    } // End collectors-img-container
+    
+                } // End section - Tablet and Mobile
+    
+            } // End main - Tablet and Mobile
+        
+        } // End media query
+    
+    } // End collectors - Tablet and Mobile 
 
-
-}
+} // End pg-collectors
 
