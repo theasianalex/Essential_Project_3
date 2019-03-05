@@ -50,7 +50,8 @@
             text-align: right;
             border-bottom: 2px solid black;
             padding: $padding-top-bottom;
-            z-index: 1
+            z-index: 1;
+            cursor: pointer;
         }
     }
 
@@ -65,23 +66,36 @@
             border-bottom: 2px solid black;
             padding: $padding-top-bottom;
             z-index: 1;
+            cursor: pointer;
         }
     }
 
     @mixin collectors-image-box {
         .collectors-img-container {
             margin: 0 auto;
-            overflow: hidden;
+            //overflow: hidden;
             width: 60%;
 
             .collectors-img {
-                width: 100%;
+                //width: 100%;
+                
                 height: auto;
                 display: block;
                 object-fit: cover;
                 position: relative;
                 text-align: center;
-                @include img-fit;
+                //@include img-fit;
+                width: 500px;
+                margin: 0 auto;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+                img {
+                    //@include img-fit;
+                    width: 100%;
+                    display: block;
+                }
             }
 
             @include subscribes;
@@ -119,6 +133,9 @@
 } //Desktop end
 
 
+
+
+
 @mixin display-grid-phone-tablet {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -130,7 +147,7 @@
 .collectors {
 
     @include breakpoint {
-        // @include display-grid-phone-tablet;
+        @include display-grid-phone-tablet;
         display: block;
         float: left;
     
@@ -213,5 +230,68 @@
     
     }; // End media query
 
-} // End collectors - Tablet and Mobile   
+} // End collectors - Tablet and Mobile 
+
+// Only for the collectors HTML page
+.pg-collectors {
+
+    .collectors {
+        //grid-template-columns:
+
+        grid-template-columns: 1fr 375px;
+
+        header {
+            grid-column: 2;
+        }
+
+        main {
+            grid-column: 1;
+        }
+
+        .collectors-section {
+            display: grid;
+            grid-template-columns: 1fr 500px 1fr;
+            grid-column-gap: 20px;
+        }
+
+        .prev {
+            position: static;
+            width: 80%;
+            justify-self: end;
+            align-self: center;
+            grid-column: 1;
+        }
+
+        .collectors-img-container {
+            width: 500px;
+            grid-column: 2;
+            grid-row: 1;
+            position: relative;
+            //overflow: auto;
+        }
+
+
+
+        .next {
+            position: static;
+            grid-column: 3;
+            width: 80%;
+            align-self: center;
+        }
+
+        .collector-name {
+            position: absolute;
+            left: -29px;
+            
+        }
+
+        .mobile-menu-button-container {
+            display: none;
+        }
+
+
+    }
+
+
+}
 
