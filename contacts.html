@@ -30,7 +30,7 @@
                 
         </header>
 <main>
-    <section>
+    <section class="message-form">
        <h2>
            Ask me anything
        </h2>
@@ -40,23 +40,22 @@
     
     <form action="./" method="post" name="form-contact" class="form-contact" id="form-contact">
         <label for="name">Name:</label>
-        <br>
         <input type="text" name="name" id="name" class="text">
-        <br>
         <label for="email">Email Address:</label>  
-        <br>
         <input type="text" name="email" id="email" class="text">
-        <br>
         <label for="message">Message:</label>
-        <br>
-        <textarea rows="10" cols="100"name="message" id="message" form="usrform" class="text"></textarea>
-        <br>
-        <input type="submit" value="Submit">
+        <textarea name="message" id="message" form="usrform" class="text"></textarea>
+        <input type="submit" value="Submit" class="submit">
     </form>
     </section>
-    <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.681090826596!2d-73.96575262307456!3d40.77950366300136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25896d52b46e7%3A0xb66ec2a36dbce858!2sThe+Obelisk!5e0!3m2!1sen!2sca!4v1550518051429" width="150%" height="50%" frameborder="0" style="border:0"></iframe>
+    <section class="location">
+    <h2>
+        Location
+    </h2>
+    <div class="map"> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.681090826596!2d-73.96575262307456!3d40.77950366300136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25896d52b46e7%3A0xb66ec2a36dbce858!2sThe+Obelisk!5e0!3m2!1sen!2sca!4v1550518051429" frameborder="0" style="border:0"></iframe>
     </div>
+    </section>
 </main>
 <footer class="subscribes-box">
         <a href="subscribes.html">Subscribes</a>

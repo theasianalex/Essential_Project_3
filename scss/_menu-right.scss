@@ -39,9 +39,9 @@
 
 @mixin display-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "c1 c1 c1 c2";
+    grid-template-areas: "c1 c2";
     font-family: $font;
     color: #060708;
 }
