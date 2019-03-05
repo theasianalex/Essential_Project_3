@@ -165,27 +165,31 @@
         }
 
 
-        @media (max-width: 768px) {
+        @media (max-width: $phone-tablet) {
             display: block;
-            // display: grid;
-            // grid-template-columns: 1fr;
-            // grid-template-rows: ;
+
+            .mobile-menu-button-container {
+                display: block;
+
+                .btn-menu {
+                    display: block;
+                    cursor: pointer; 
+                    background-color: $button-color;
+                    color: $text-color-light;
+                    font-weight: bold;
+                    width: 70px;
+                    height: 30px;
+                    margin-left: 10px;
+                    float: left;
+                    
+                }
+            }
         
             @include no-mar-pad;
             width: 100%;
             height: 100%;
             margin-top: 10px;
     
-            .btn-menu {    
-                display: block;
-                background-color: $button-color;
-                color: $text-color-light;
-                font-weight: bold;
-                width: 70px;
-                height: 30px;
-                margin-left: 10px;
-                float: left;
-            }
     
             header {
                 height: 100%;

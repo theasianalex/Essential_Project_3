@@ -1,5 +1,5 @@
 $(document).ready(function(){
     $("#btn-menu").click(function(){
-      $("#menu").slideDown("slow");
+      $("#menu-li").slideDown("slow");
     });
   });
