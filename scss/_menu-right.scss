@@ -77,10 +77,15 @@
         }
     
         nav {
-            height: 0;
+            //height: 0;
+            display: none;
             overflow: hidden;
             width: 100%;
             transition: height 0.3s ease;
+        }
+
+        @at-root .show nav {
+            display: block;
         }
     
         nav ul {
@@ -97,10 +102,7 @@
         nav li:last-child a {
             border-bottom: 1px solid #afafaf;
         }
-    
-        .show nav {
-            height: 100em;    
-        }
+
 
 
      

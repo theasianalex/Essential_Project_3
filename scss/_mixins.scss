@@ -13,8 +13,8 @@
     }
 }
 
-@mixin breakpoint {
-    @media (max-width: $phone-tablet) {
+@mixin breakpoint($break-point) {
+    @media (max-width: $break-point) {
         @content;
     }
 }
