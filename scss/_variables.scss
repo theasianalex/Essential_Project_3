@@ -28,7 +28,11 @@ $margin-p: 4vw;
 $link-hover-selector: '&:hover, &:focus, &:active';
 
 
-
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
 
 
 // -------
@@ -46,11 +50,7 @@ $padding-top-bottom: 10px 0;
 $gutter: 2;
 
 
-// Function to
-// Convert Px to Ems
-@function em($px, $bc: 16){
-    @return #{$px/$bc}em; 
-}
+
 
 // Media Query Breakpoints
 $tabletLandscape: em(1024);
