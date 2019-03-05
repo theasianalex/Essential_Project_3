@@ -46,4 +46,68 @@
     color: #060708;
 }
 
+@mixin mobile-menu-bar {
+        .hamburger {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            width: 30px;
+            height: 30px;   
+            float: right;
+            justify-content: center;
+            cursor: pointer;
+            
+        }
+    
+        .hamburger-icon {
+            color: black;
+            line-height: 1;
+            font-size: 2.4em;
+        }
+    
+        .hamburger:focus,
+        .hamburger-icon:focus {
+            outline: none;
+        }
+        
+        .hamburger:focus .hamburger-icon {
+            outline: 5px solid #69c1db;
+        }
+    
+        nav {
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            transition: height 0.3s ease;
+        }
+    
+        nav ul {
+            display: block;
+        }
+    
+        nav a {
+            line-height: 100px;
+            border-bottom: 1px solid black;
+            border-top: 1px solid #afafaf;
+            color: black;
+        }
+    
+        nav li:last-child a {
+            border-bottom: 1px solid #afafaf;
+        }
+    
+        .show nav {
+            height: 100em;    
+        }
+
+
+     
+        .subscribes-box{
+            padding:0;
+            margin-right: 1vw;
+            width: auto;
+        }
+}
 

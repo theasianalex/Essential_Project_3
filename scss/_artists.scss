@@ -57,14 +57,34 @@
             @include no-style-link;
             margin-top: 0;
         }
-
-    
-
-
+        
+       }
+       .hamburger {
+        display: none;
     }
+   
+   @media only screen and (max-width: 800px){
 
+    @include mobile-menu-bar;
+    main{
+        display: block;
+        margin-left: 5%;
+    }
+    .recent{
+        margin-bottom: 5vh;
+    }
+    .col-search {
+        margin-bottom: 10%;
+    }
+    .artist-date {
+        display: none;
+    }
+    .searchform {
+        ;
+        input[type="search"]{
+            text-align: left;
+        }
+    }
+    
+}}
 
-
-
-
-}
