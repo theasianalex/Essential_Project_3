@@ -163,9 +163,12 @@
         .mobile-menu-button-container {
             display: none;
         }
+        .hamburger {
+            display: none;
+        }
 
 
-        @media (max-width: 768px) {
+        @media (max-width: $phone-tablet) {
             display: block;
             // display: grid;
             // grid-template-columns: 1fr;
@@ -188,9 +191,22 @@
             }
     
             header {
-                height: 100%;
-                text-align: right; 
-                display: none;       
+                
+                display: flex;  
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+                margin-top: 5%; 
+                margin-right: 5%;
+                    .menu-li{
+                        float: left;
+                        text-align: left;
+                        margin-left: 5%;
+                    }
+
+                    .hamburger{
+                        margin: 0 0 5% 5%;
+                    }  
             }
     
             main {

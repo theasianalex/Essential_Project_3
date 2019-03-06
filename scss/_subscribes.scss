@@ -7,14 +7,14 @@
         right: 0;
         width: 150px;
         padding: 0;
-        margin-right: 2%;
+        margin-right: 2.5%;
 
 
         a {
             display: block;
             padding: 1vh 2vw;
             text-align: center;
-            margin: 0 auto;
+            margin: 0;
             background-color: $button-color;
             @include no-style-link(white);
         } // End a
