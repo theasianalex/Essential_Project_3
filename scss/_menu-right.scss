@@ -1,13 +1,14 @@
 @mixin menu-right {
     
+   
     header {
-        grid-area: c2;
-        margin-right: 2%;
-        position: fixed;
-        right: 0;
-        top: 0;
-        display: block;
-        z-index: 1;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        h1 {
+            margin-bottom: 12px;
+        }
     }
     header  h1 a {
         //@include transform;
@@ -48,14 +49,13 @@
 
 @mixin mobile-menu-bar {
         .hamburger {
-            display: flex;
+            display: block;
             border: none;
             background-color: transparent;
             padding: 0;
             margin: 0;
             width: 30px;
             height: 30px;   
-            float: right;
             justify-content: center;
             cursor: pointer;
             
@@ -90,21 +90,13 @@
     
         nav ul {
             display: block;
+            justify-content: left;
         }
     
         nav a {
-            line-height: 100px;
-            border-bottom: 1px solid black;
-            border-top: 1px solid #afafaf;
             color: black;
         }
     
-        nav li:last-child a {
-            border-bottom: 1px solid #afafaf;
-        }
-
-
-     
         .subscribes-box{
             padding:0;
             margin-right: 1vw;
