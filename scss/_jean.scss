@@ -52,7 +52,24 @@
         display: none;
     }
    
-   @media only screen and (max-width: 800px){
+    @media only screen and (max-width: $phone-tablet){
+    display: block;
+    header {
+        
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        margin-top: 5%;  
+        .menu-li{
+            float: left;
+            text-align: left;
+            margin-left: 5%;
+        }
+
+        .hamburger{
+        margin: 0 0 18px 5%;
+        }
+    }
 
     @include mobile-menu-bar;
 
