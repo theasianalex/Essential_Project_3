@@ -60,9 +60,6 @@
         }
 
     } // End main - Desktop
-    .hamburger {
-        display: none;
-    }
 
     @media (max-width: $phone-tablet) {
         display: flex;
