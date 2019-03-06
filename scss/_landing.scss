@@ -9,7 +9,6 @@
     position: relative;
     display: block;
     height: auto;
-    position: relative;
  };
  header a {
    position: absolute;
@@ -25,14 +24,14 @@
     position: relative;
  };
  .landing-img {
-    width: 100%;
-    height: 100%;
+    @include img-cover;
+    
     
  };
  .quote-landing p {
-     width: 35vw;
+     width: 100%;
      text-align: center;
-     font-size: $font-p;
+     font-size: 40px;
      margin: 0;
  }
  .quote-landing {
@@ -41,7 +40,19 @@
     left: 50%;
     bottom: 50%;
     color: white;
+ } 
+ @media only screen and (max-width: $phone-tablet){
+    display: block;
+    header{
+       padding: 50%;
+    }
+    main{
+       width: 100%;
+       
+    }
  }
+
+
 }
 
 
