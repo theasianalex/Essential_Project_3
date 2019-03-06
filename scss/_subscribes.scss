@@ -3,7 +3,7 @@
         font-size: $font-p;
         font-weight: bold;  
         position: fixed;
-        bottom: 5%;
+        bottom: 2%;
         right: 0;
         width: 150px;
         padding: 0;
@@ -26,10 +26,12 @@
 @mixin subscribes-mobile {
 
     .subscribes-box {
-        font-size: 0.7em;
+        // font-size: 0.7em;
         font-weight: bold;
         display: block;
         list-style: none;
+        bottom: 2%;
+        margin-right: 20px;
         @include no-style-link;
 
         ul {
@@ -41,12 +43,13 @@
             color: $text-color-light;
             display: block;
             width: 100px;
-            line-height: $line-height;
+            line-height: calc($line-height-10px);
             text-align: center;  
             background-color: #060708;
-            font-size: 1.3em;
+            font-size: 0.9em;
             outline: none;
             text-decoration: none;
+            margin-right: 0;
 
             #{ $link-hover-selector } {
                 background-color: rgba(black, 0.3);

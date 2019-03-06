@@ -133,10 +133,7 @@
                 }
             }
    
-        
-
-
-    
+         
             header {
                 height: 100%;
                 text-align: right; 
@@ -165,6 +162,7 @@
 					.prev-next {
 						display: flex;
                         justify-content: space-between;
+                        margin-bottom: 70px;
                         
                         .prev {
                             cursor: pointer;
@@ -198,7 +196,6 @@
             } // End main - Tablet and Mobile
             @include subscribes-mobile;
                 .subscribes-box {
-                    float: right;
                     text-align: center;
                 }
         
