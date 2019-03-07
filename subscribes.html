@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Subscribes Page</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-
-<div class="wrapper">
+<div class="subscribe">
     <header>
-        <a href="all-stories.html" class="logo-spe">Essential</a>
+            <h1><a href="all-stories.html">.Essential</a></h1>
+            <p>Join our mailing list to stay up to date on upcoming publications</p>
+            <form action="./" method="post"     name="form-contact" class="sub-email-box"   id="form-contact">
+            <input type="text" name="email" id="email" class="email-box">
+            </form>
+        
     </header>
-    <main >
-        <img class="subscribes-img" src="#" alt="an colorful abstract painting">
-        <p>Join our mailing list to stay up to date on our upcoming publications</p>
-        <form>
-            <textarea rows="1" cols="60" name="comment" form="usrform">Your Email Address</textarea>
-        </form>
-    </main>
+    
+    <footer>
+    <button onclick="goBack()"> Back</button>
+    </footer>
 </div>
-
+<script src="./script/script.js"></script>
 </body>
 </html>
