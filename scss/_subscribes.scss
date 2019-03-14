@@ -1,49 +1,56 @@
-// .subscribe{
-//     position: relative;
-//     width: 100vw;
-//     height: 100vh;
-//     position: relative;
-//     background-color: white;
-//     font-size: $font-p;
-//     header{
-//         position: absolute;
-//         transform: translate(50%,-50%);
-//         top: 50%;
-//         right: 50%;
-//         h1{
-//             text-align: center;
-//         }
-//         p{
-//             text-align: center;
-//         }
-//         a {
-//             @include essential;
-//             @include no-style-link;
-//         }
+.subscribe{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: white;
+    font-size: $font-p;
+    header{
+        position: absolute;
+        transform: translate(50%,-50%);
+        top: 50%;
+        right: 50%;
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        a {
+            @include essential;
+            @include no-style-link;
+        }
        
-//         form{
-//             text-align: center;                       
-//             input{
-//                 background-color:#bfbfbf;
-//                 width: 20vw;
-//                 height: 3vh;
-//                 border-width: 0;
-//                 font-size: $font-p;
-//             }
-//         }
-//     }
-//     footer{
-//         button{
-//             padding: 2px 15px 2px 15px;
-//             background-color: #060708;
-//             color: white;
-//             font-size: $font-p;
-//             border-width: 0;
-//         }
-//         position: absolute;
-//         transform: translate(50%,-50%);
-//         bottom: 5%;
-//         right: 50%;
+        form{
+            text-align: center;                       
+            input{
+                background-color:#bfbfbf;
+                width: 20vw;
+                height: 3vh;
+                border-width: 0;
+                font-size: $font-p;
+            }
+            button{
+                padding: 2px 15px 2px 15px;
+                background-color: #060708;
+                color: white;
+                font-size: $font-p;
+                border-width: 0;
+            }
+        }
+    }
+    footer{
+        button{
+            padding: 2px 15px 2px 15px;
+            background-color: #060708;
+            color: white;
+            font-size: $font-p;
+            border-width: 0;
+        }
+        position: absolute;
+        transform: translate(50%,-50%);
+        bottom: 5%;
+        right: 50%;
 
-//     }
-// }
+    }
+}
