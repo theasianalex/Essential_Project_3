@@ -6,6 +6,7 @@
     background-color: white;
     font-size: $font-p;
     header{
+        width: 90vw;
         position: absolute;
         transform: translate(50%,-50%);
         top: 50%;
@@ -22,15 +23,16 @@
         }
        
         form{
-            text-align: center;                       
+            text-align: center;                  
             input{
                 background-color:#bfbfbf;
-                width: 20vw;
-                height: 3vh;
+                width: 50vw;
+                height: 30px;
                 border-width: 0;
                 font-size: $font-p;
             }
             button{
+                margin: 5px 0 0 5px;
                 padding: 2px 15px 2px 15px;
                 background-color: #060708;
                 color: white;
