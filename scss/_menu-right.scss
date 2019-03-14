@@ -84,7 +84,7 @@
             transition: height 0.3s ease;
         }
 
-        @at-root .show nav {
+        @at-root .pg-collectors.show .collectors header nav {
             display: block;
         }
     
