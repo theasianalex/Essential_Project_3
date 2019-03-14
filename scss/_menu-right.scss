@@ -166,3 +166,20 @@
     
 } // End subscribes-mobile
 
+
+.pg-collectors.show .collectors header nav {
+
+    @media(max-width: $phone-tablet){
+        display: block;
+        margin-left: 5%;
+    }
+
+}
+
+.jj-collectors.show .collectors-josh-jack header nav {
+    @media(max-width: $phone-tablet){
+        display: block;
+    }
+
+}
+
