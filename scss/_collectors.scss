@@ -147,6 +147,10 @@
         @media (max-width: $phone-tablet) {
 
             display: block;
+
+            .subscribes-box {
+                display: none;
+            }
     
             @include no-mar-pad;
             width: 100%;
@@ -198,8 +202,9 @@
                         text-align: left;
                         width: 100px;
                         position: absolute;
-                        left: 16%;
-                        bottom: 3%;
+                        left: 8%;
+                        bottom: -6%;
+                        margin-bottom: 30px;
                     }
     
                     .next {
@@ -209,8 +214,9 @@
                         text-align: right;
                         width: 100px;
                         position: absolute;
-                        right: 16%;
-                        bottom: 3%;
+                        right: 15%;
+                        bottom: -6%;
+                        margin-bottom: 30px;
                     }
     
                     .collectors-img-container {
