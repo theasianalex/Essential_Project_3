@@ -3,7 +3,16 @@
     @include menu-right;
     @include subscribes;
     font-family: $font;
+    .copyright {
+        text-align: center;
+        margin: 10px 0 10px 0;
+        a{
+            text-decoration: none;
+            color: black;
+        }
 
+
+    }
     .hamburger {
         display: none;
     }
