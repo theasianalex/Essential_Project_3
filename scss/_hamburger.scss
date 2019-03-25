@@ -1,0 +1,42 @@
+
+.hamburger {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;   
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+
+    .hamburger-icon {
+        color: black;
+        line-height: 1;
+        font-size: 40px;
+    }
+
+    .hamburger:focus,
+    .hamburger-icon:focus {
+        outline: none;
+    }
+    
+    // .hamburger .hamburger-icon {
+    //     outline: 5px solid #69c1db;
+    // }  
+    
+    @include bp($phone-tablet){
+        display: none;
+    }
+
+} // hamburger end - For mobile   
+
+    
+
+
+
+
+

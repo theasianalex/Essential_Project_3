@@ -10,10 +10,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body class="pg-collectors">
+<!-- <body class="pg-collectors"> -->
 
-
-<div class="collectors">  
+<div class="wrapper">
+<!-- <div class="collectors">   -->
    
     <header>
         <h1><a href="all-stories.html">.Essential</a></h1>
@@ -38,16 +40,15 @@
             
                 <li><a href="contacts.html">Contact</a></li>
             </ul>
-        </nav>
-        
+        </nav>  
     </header>
 
     <main>
         <section class="collectors-section">
-            <p id="prev" class="prev">Previous</p>
-            <p id="next" class="next">Next</p>
+            
             <div class="collectors-img-container">
                 <h2 class="collector-name"><a href="Josh-Jack.html" id="collector-name"></a></h2>
+                
                 <div class="collectors-img">
                     <div class="slides cycle-slideshow" 
                          data-cycle-slides=".slide"
@@ -67,17 +68,25 @@
                                 <img src="images/slides/collector-03-david-ostrowski.jpg" alt="David Ostrowski">
                             </a>
                     </div> <!-- End slides -->
+                    <span class="prev-next">
+                        <span id="prev" class="prev">Previous</span>
+                        <span id="next" class="next">Next</span>
+                    </span>
+                    
                 </div> <!-- End collectors-img -->
             </div> <!-- End collectors-img-container -->
         </section>
-        <footer class="subscribes-box">
-            <a href="subscribes.html">Subscribe</a>
-        </footer>
+        
     </main>
+    <footer class="subscribes-box">
+        <a href="subscribes.html">Subscribe</a>
+        <a class="alex" href="http://adang.bcitwebdeveloper.ca/">Alex Dang</a>
+    </footer>
+    
 
 </div> <!-- Collectors end-->
 
-    
+</div> <!-- wrapper end-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>

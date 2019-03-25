@@ -1,106 +1,89 @@
-.artist-page {
-    @include display-grid;
-    @include menu-right;
-    @include subscribes;
+.pg-artists {
+    
 
     main {
-        grid-area: c1;
-        @include search-bar;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 10fr;
-        grid-template-areas: "a1 a2 a3"
-                             "a4 a5 a5";
-        margin-top: 15vh;
-        font-family: $font;
-        font-size: $font-p;
-        @include no-style-link;
 
-
-        //search col style
         .col-search {
-            grid-area: a1;
+            margin: 40px 0;
         }
 
-        //recent style
         .recent{
-            grid-area: a2;
-        }
-        .recent h2 {
-            margin: 0;
+            margin: 40px 0 0 25px;
         }
 
-
-        //name date style
         .name-date {
-            margin: 0;
-            grid-area: a5;
-            display: flex;
+
+            ul {
+                list-style: none;
+                margin-bottom: 20px;
+                padding-left: 25px;
+
+                li {
+                    margin: 10px 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-family: $font;
+                    font-size: $font-h2;
+                }
+            }
         }
-         .name-date li{
-            list-style-type: none;
-            margin-bottom: 5vh;
-        }
-        .name-li a {
-            @include no-style-link;
-            margin-bottom: 5vh;
-        }
-        .artist-name{
-            padding: 0;
-            margin-top: 0;
-            margin-right: 15vw;
-        }
+
         .artist-date {
-            margin-top: 0;
+            display: none;
         }
-        .date-li a {
-            @include no-style-link;
-            margin-top: 0;
-        }
-        
-       }
-       .hamburger {
-        display: none;
-    }
-   
-    @media only screen and (max-width: $phone-tablet){
-        display: block;
-        header {
+
+        @include bp($phone-tablet) {
+            grid-area: c1;
+            display: grid;
+            // grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 10fr;
+            grid-template-areas: "a1 a2 a3"
+                                 "a4 a5 a5";
+            margin-top: 15vh;
+            color: $text-color;
+            height: 580px;
+
+            .col-search {
+                grid-area: a1;
+            }
+
+            .recent{
+                grid-area: a2;
+            }
+            .recent h2 {
+                margin: 0;
+            }
+
+
+            //name date style
+            .name-date {
+                margin: 0;
+                grid-area: a5;
+                display: flex;
+                
+            }
+            .name-date li{
+                margin-bottom: 5vh;
+            }
+            .name-li a {
+                margin-bottom: 5vh;
+            }
+            .artist-name {
+                padding: 0;
+                margin-top: 0;
+                margin-right: 15vw;
+
+            }
+            .artist-date {
+                margin-top: 0;
+                display: block;
+            }
             
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-            margin-top: 5%;  
-            .menu-li{
-                float: left;
-                text-align: left;
-                margin-left: 5%;
-            }
+        } // Desktop end       
 
-            .hamburger{
-            margin: 0 0 5% 5%;
-            }
-        }
-
-    @include mobile-menu-bar;
-    main{
-        display: block;
-        margin-left: 5%;
-    }
-    .recent{
-        margin-bottom: 5vh;
-    }
-    .col-search {
-        margin-bottom: 10%;
-    }
-    .artist-date {
-        display: none;
-    }
-    .searchform {
-        input[type="search"]{
-            text-align: left;
-        }
-    }
-    
-}}
+    } // main end
+      
+} // pg-artists end
 

@@ -1,8 +1,26 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "c1 c2";
-    font-family: $font;
-    color: #060708;
-}
+    // For mobile
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    // For desktop
+    @include bp($phone-tablet) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "c1 c2";
+        font-family: $font;
+        color: #060708;
+
+        main {
+            grid-area: c1;
+            // margin: auto;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr 1fr;
+            // display: block;
+        }
+        
+    } // desktop end
+
+} // wrapper end

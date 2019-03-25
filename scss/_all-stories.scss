@@ -1,101 +1,70 @@
-.all-stories {
-    @include display-grid;
-    @include menu-right;
-    @include subscribes;
-
-   
-
+.pg-all-stories {
 
     main {
-        margin-left: 5%;
-        margin-top: 5%;
-        grid-area: c1;
-        display: grid;
-        grid-template-columns: repeat(3, 3fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas:"i1 i1 i2"
-                             "i1 i1 i3"
-                             "i1 i1 i7"
-                             "i4 i4 i4"
-                             "i4 i4 i4"
-                             "i5 i6 i6"
-                             "i5 i6 i6";
-        grid-gap: 2%;
-    };
 
-    .im1{
-        grid-area: i1;
-        
-    }
-    .im1 img {
-        @include img-fit;
-    }
-    .im2{
-        grid-area: i2;
-    }
-    .im2 img {
-        @include img-fit;
-    }
-    .im3{
-        grid-area: i3;
-    }
-    .im3 img {
-        @include img-fit;
-    }
-    .im4{
-        grid-area: i4;
-    }
-    .im4 img {
-        @include img-fit;
-    }
-    .im5{
-        grid-area: i5;
-    }
-    .im5 img {
-        @include img-fit;
-    }
-    .im6{
-        grid-area: i6;
-    }
-    .im6 img {
-        @include img-fit;
-    }
-    .im7{
-        grid-area: i7;
-    }
-    .im7 img {
-        @include img-fit;
-    }
-    .hamburger {
-        display: none;
-    }
-   
-   @media only screen and (max-width: $phone-tablet){
-        display: block;
-        header {
-            
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-            margin-top: 5%; 
-            margin-right: 5%;
-            .menu-li{
-                float: left;
-                text-align: left;
-                margin-left: 5%;
-            }
-
-            .hamburger{
-            margin: 0 0 5% 5%;
-            }
-        }
-      
-       
-  
-    @include mobile-menu-bar;
-    main{
+        // For mobile
         display:block;
-        margin-right: 5%;
-    }
-   }
-}
+    
+
+        // For desktop
+        @include bp($phone-tablet) {
+        
+            margin: auto;
+            margin-top: 4%;
+            margin-left: 4%;
+            margin-bottom: 4%;
+            grid-area: c1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            grid-template-areas: "i1 i1 i2"
+                                 "i1 i1 i3"
+                                 "i1 i1 i4"
+                                 "i5 i5 i5"
+                                 "i5 i5 i5"
+                                 "i6 i7 i7"
+                                 "i6 i7 i7";
+            grid-gap: 2%;
+
+            a {
+                display: block;
+
+                img {
+                    display: block;
+                    @include img-fit;
+                }
+            }
+
+            .im1 {
+                grid-area: i1;
+            }
+
+            .im2 {
+                grid-area: i2;
+            }
+
+            .im3 {
+                grid-area: i3;
+            }
+
+            .im4 {
+                grid-area: i4;
+            }
+
+            .im5 {
+                grid-area: i5;
+            }
+
+            .im6 {
+                grid-area: i6;
+            }
+
+            .im7 {
+                grid-area: i7;
+            }      
+
+        } // desktop end
+
+    } // main end
+
+} // body end

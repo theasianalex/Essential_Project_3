@@ -1,15 +1,32 @@
-// Header styles
-// header {
-//     background-color: $brand-color;
-//     padding: $padding $padding*2;
-//     @include flex-layout-row;
-//     @include flex-layout-column;  
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: block;
+    margin-top: 40px; 
+    position: relative;
 
-//     h1 {
-//         @include flatten;
-//         color: $text-color;
-//         @media (max-width: $phoneLandscape){
-//             font-size: 1.6em;
-//         }
-//     }
-// }
+    h1 {
+        @include flatten(false);
+        margin-right: 2%;
+        margin-bottom: 2%;
+        font-weight: bold;
+        font-family: $font;
+        font-size: $font-h1;
+
+        a {
+            text-align: right;
+            display: block;
+            text-decoration: none;
+            color: $text-color;
+        }
+    } // H1 end 
+  
+    @include bp($phone-tablet) {
+        flex-wrap: wrap;
+        align-self: right;
+        margin-right: 10%;
+        display: block;
+    } // media query end - For desktop
+
+} // Header end - For mobile

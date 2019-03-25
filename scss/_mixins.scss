@@ -1,9 +1,4 @@
-// Mixin for media query
-// @mixin tablet {
-//     @media (min-width: $phone) and (max-width: $desktopMedium) {
-//         @content;
-//     }
-// }
+
 
 @mixin clearblock {
     &:after {
@@ -13,15 +8,11 @@
     }
 }
 
-@mixin breakpoint($break-point) {
-    @media (max-width: $break-point) {
+@mixin bp($break-point) {
+    @media (min-width: $break-point) {
         @content;
     }
 }
-
-
-
-
 
 //object fit
 @mixin img-fit {
@@ -30,7 +21,7 @@
     object-fit: cover;
     display: block;
 }
-// Rogina did above changes----------------
+// ---------------
 
 
 
@@ -48,10 +39,16 @@
 // margins and padding and
 // setting the line-height to 1 
 // ...useful mainly on typographic elements
-@mixin flatten {
+@mixin flatten($is-list: true){
+
     margin: 0;
     padding: 0;
-    line-height: 1;
+    @if($is-list){
+        list-style: none;
+    }@else {
+        line-height: 1;
+    }
+
 }
 
 
@@ -70,7 +67,11 @@
 
 
 // Layout Mixins
-
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 
 
@@ -133,84 +134,27 @@ $aspect-ratios: (
 
 }
 
-
-
-
-
-//Tranform
-
-@mixin transform {
-    transform: translate(-50%,50%);
-}
-
-//link
-
-@mixin no-style-link($color: #060708) {
-    text-decoration: none;
-    color: $color;
-}
-
-//logo landing subscribes page
-@mixin essential {
-    font-weight: bold;
-    font-family: $font;
-    font-size: $font-h1;
-    color: $text-color;
-}
-//logo other page
-@mixin essential-other {
-    font-weight: bold;
-    font-family: $font;
-    font-size: $font-h1;
-    color: $text-color;
-}
-
-//layout
 @mixin no-mar-pad {
     margin: 0;
     padding: 0;
 }
 
-
-
-//search bar 
-
-@mixin search-bar{
-    .searchform {
-        display: flex;
-        margin: 0;
-        overflow: hidden;
-        width: 80%;
-        justify-content: flex-end;
-        padding-left: 3vw;
-      }
-      input{
-        color: #060708;
-      }
-    
-      input[type="search"] {
-        display: block;
-        text-align: right;
-        border: 1px solid #060708;
-        border-width: 0 0 2px;
-        background-color: transparent;
-        font-size: $font-p;
-        font-family: $font;
-        font-weight: bold;
-        padding: 0.125em 0.225em;
-        width: 100%;
-        
-      }
-      input[type="search"]:focus {
-        color:#060708;
-        border-color: #060708;
-        outline: none;
-      }
+@mixin no-style-link {
+    text-decoration: none;
 }
-//text style
 
 @mixin article-style {
     font-size: $font-p;
     line-height: 200%;
+}
 
+@mixin transform {
+    transform: translate(-50%,50%);
+}
+
+@mixin essential {
+    font-weight: bold;
+    font-family: $font;
+    font-size: $font-h1;
+    color: $text-color;
 }

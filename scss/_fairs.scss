@@ -1,56 +1,43 @@
-.fairs {
-    @include display-grid;
-    @include menu-right;
-    @include subscribes;
+.pg-fairs {
+
     font-family: $font;
 
     main{
-        grid-area: c1;
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "f1 f2";
-        grid-gap: 5px;
-        margin-top: 5%;
-        margin-left: 5%;
-
-        h2 {
-            grid-area: f1; 
-            font-size: $font-h3;
-        }
-        section {
-            grid-area: f2;
-            @include article-style;
-        }
-    }
-    .hamburger {
-        display: none;
-    }
-   
-    @media only screen and (max-width: $phone-tablet){
-        display: block;
-        header {
-            
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-            margin-top: 5%;  
-            .menu-li{
-                float: left;
-                text-align: left;
-                margin-left: 5%;
-            }
-
-            .hamburger{
-            margin: 0 0 18px 5%;
-            }
-        }
-
-    @include mobile-menu-bar;
-    main{
         display:block;
-        margin-top: 5%;
-        margin-right: 5%;
+        margin: 10px 10px 0 10px;
+
+        h1 {
+            font-size: $font-h1;
+        }
+
+        p {
+            font-size: $font-p;
+            line-height: 30px;
+            margin: 10px;
+        }
     }
-}
-}
+
+    @include bp($phone-tablet) {
+
+        main{
+            grid-area: c1;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "f1 f2";
+            grid-gap: 5px;
+            margin-top: 50px;
+            margin-left: 50px;
+
+            h1 {
+                grid-area: f1;    
+            }
+            section {
+                grid-area: f2;
+                @include article-style;
+            }
+        } // main end - desktop
+
+    } // desktop end - desktop
+
+} // pg-fairs end - desktop

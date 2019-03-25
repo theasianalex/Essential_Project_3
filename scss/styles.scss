@@ -14,24 +14,23 @@
 
 // Site Sections
 @import 'body';
-@import 'menu-right';
+
+// @import commons;
+@import 'wrapper';
+@import 'header';
 @import 'hamburger';
 @import 'nav';
-
-// @import 'sidebar';
 @import 'footer';
 
 // Specialty Items
-@import 'subscribes';
+@import 'all-stories';
 @import 'artists';
+@import 'search-bar';
 @import 'collectors';
 @import 'exhibitions';
-@import 'all-stories';
 @import 'fairs';
 @import 'contact';
 @import 'landing';
 @import 'jean';
 @import 'josh';
 
-//Responsive 
-@import 'mobile';

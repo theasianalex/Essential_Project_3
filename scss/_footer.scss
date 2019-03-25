@@ -1,0 +1,26 @@
+footer {
+    font-size: $font-p;
+    font-weight: bold;
+    max-width: 160px;
+    display: block;
+    margin: 10px 0 20px 0;
+
+    a {
+        display: block;
+        padding: 1vh 2vw;
+        text-align: center;
+        margin: 0;
+        background-color: $button-color;
+        color: $text-color-light;
+        text-decoration: none;
+    } // End a
+
+    @include bp($phone-tablet) {
+        position: fixed;
+        bottom: 2%;
+        right: 0;
+        padding: 0;
+        margin-right: 2.5%;
+    }
+
+} // End .subscribes-box

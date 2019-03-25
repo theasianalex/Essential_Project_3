@@ -1,74 +1,55 @@
-.exhibitions {
-    @include display-grid;
-    @include menu-right;
-    @include subscribes;
-    z-index: 0;
-    font-family: $font;
+.pg-exhibitions {
 
-    main{
-        grid-area: c1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "ex1 ex2"
-                             "ex3 ex4";
-        grid-gap: 2%;
-        margin-left: 3%;
-        
-        .david-main-page {
-            margin-top: 5vh;
-            grid-area: ex1;
-        }  
-        .david-main-page img {
-            @include img-fit;
-        }                
-        .exhibition-text-left {
-            margin-top: 5vh;
-            grid-area: ex2;
-            @include article-style;
-        }   
-        .exhibition-text-right {
-            grid-area: ex3;
-            @include article-style;
-        }
-        .andrea-main-page {
-            grid-area: ex4;
-            
-        }
-        .andrea-main-page img {
-            @include img-fit;
-        }
-       
-    }
-    .hamburger {
-        display: none;
-    }
-   
-    @media only screen and (max-width: $phone-tablet){
-        display: block;
-        header {
-            
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-            margin-top: 5%;  
-            .menu-li{
-                float: left;
-                text-align: left;
-                margin-left: 5%;
-            }
-
-            .hamburger{
-            margin: 0 0 18px 5%;
-            }
-        }
-
-
-    @include mobile-menu-bar;
-    main{
+    main {
         display:block;
-        margin-top: 5%;
-        margin-right: 5%;
+        margin: 20px 10px 0 10px;
     }
-}
-}
+
+    @include bp($phone-tablet) {
+        .wrapper {
+            z-index: 0;
+            font-family: $font;
+
+            main{
+                grid-area: c1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "ex1 ex2"
+                                     "ex3 ex4";
+                grid-gap: 2%;
+                margin-left: 3%;
+                
+                .david-main-page {
+                    margin-top: 5vh;
+                    grid-area: ex1;
+                }
+
+                .david-main-page img {
+                    @include img-fit;
+                }
+                
+                .exhibition-text-left {
+                    margin-top: 5vh;
+                    grid-area: ex2;
+                    @include article-style;
+                }   
+                .exhibition-text-right {
+                    grid-area: ex3;
+                    @include article-style;
+                }
+                .andrea-main-page {
+                    grid-area: ex4;
+                    
+                }
+                .andrea-main-page img {
+                    @include img-fit;
+                }
+            
+            } // main end - desktop
+
+        } // wrapper end - desktop
+
+    } //desktop end
+
+} // pg-exhibitions end

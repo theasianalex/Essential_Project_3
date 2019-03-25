@@ -9,10 +9,16 @@ html {
     box-sizing: inherit;
 }
 
+// a set
+a {
+    text-decoration: none;
+}
+
 // Image Reset
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 // Table Reset

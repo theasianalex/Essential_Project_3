@@ -1,0 +1,54 @@
+
+nav {
+
+    // For mobile
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    transition: height 0.3s ease;
+
+    @at-root .show nav {
+        display: block;
+    }
+
+    ul {
+        display: block;
+        list-style: none;
+        justify-content: left;
+        text-align: left;  
+
+        li {
+            margin-bottom: 5px;
+
+            a {
+                font-size: $font-h2;
+                text-decoration: none;
+                color: $text-color;
+                display: block;
+            }
+        }  
+
+    } // ul end - For mobile
+
+
+    
+    @include bp($phone-tablet){
+
+        display: block;
+        height: 100%;
+        margin-top: 50px;
+
+        ul {
+            text-align: right;
+            padding: 0; 
+            font-weight: bold;
+
+            li {
+                margin-bottom: 14%;
+            } // li end - For desktop
+
+        } // ul end - For desktop
+
+    } // media query end - For desktop
+
+} // Nav end for mobile

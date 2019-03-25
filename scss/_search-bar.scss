@@ -1,0 +1,32 @@
+.searchform {
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    width: 80%;
+    justify-content: flex-start;
+    padding-left: 3vw;
+
+    input[type="search"] {
+        color: #060708;
+        display: block;
+        text-align: left;
+        border: 1px solid #060708;
+        border-width: 0 0 2px;
+        background-color: transparent;
+        font-size: $font-p;
+        font-family: $font;
+        font-weight: bold;
+        padding: 0.125em 0.225em;
+        width: 100%;
+    }
+
+    input[type="search"]:focus {
+        color:#060708;
+        border-color: #060708;
+        outline: none;
+    }
+}
+
+    
+
+      

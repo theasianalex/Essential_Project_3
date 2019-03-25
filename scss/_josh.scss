@@ -1,34 +1,78 @@
 
 // Only for the collectors-Josh-Jack HTML page
 //--------------------------------------
-    // For desktop
+// Tablet and Mobile begins
+.pg-josh {
 
-.jj-collectors {
+    main {
+        display:block;
+        margin: 0 auto;
 
-    .collectors-josh-jack {
+        section {
 
-        @include display-grid;
-        @include menu-right;
-        @include subscribes;
+            img {
+                width: 100%;
+                height: auto;
+                
+            }
 
-        .mobile-menu-button-container {
-            display: none;
-        }
-        .hamburger {
-            display: none;
-        }
+            h2 {
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+            }
+
+            p {
+                margin-left: 10px;
+            }
+
+            .prev-next {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 5px;
+
+                .prev, .next {
+                    cursor: pointer;
+                    width: 110px;
+                    border-bottom: 2px solid black;
+                    padding: $padding-top-bottom;
+                    color: $text-color-blue;
+                    font-weight: bold;
+                }
+                
+                .prev {                    
+                    margin-left: 5px;
+                }
+
+                .next {        
+                    text-align: right;
+                    margin-right: 5px;
+                }
+
+            }
+
+        } // End section - Tablet and Mobile
+
+    } // End media query
+
+
+
+
+// For desktop
+@include bp($phone-tablet) {
+
+    main {
+        grid-area: c1;
+        display: block; 
+        margin-top: 40px;
         
-        main {
-            grid-area: c1;
-            display: block; 
-            
-            section {
-                @include flex-layout-row;
-            } // Section end
-
-        } // Main end
-
         .collectors-section {
+            @include flex-layout-row;
+
             display: grid;
             grid-template-columns: 1fr;
             margin: 0 auto;
@@ -36,147 +80,33 @@
             a {
                 margin: 0 auto;
                 display: block;
-                width: 100%;
-                
+
                 img {
                     align-self: center;
                 }
             }
             
-			
-			h2 {
-				text-align: center;
+            
+            h2 {
+                text-align: center;
                 z-index: 1;
 
-				a {
+                a {
                     @include no-style-link;
-				}
-			}
-        }
+                }
+            }
 
-		.prev-next {
-			display: flex;
-            justify-content: space-between;
             
-            .prev {
-                cursor: pointer;
-                width: 150px;
-                justify-self: start;
-                align-self: left;
-                color: $text-color-blue;
-                text-align: left;
-                border-bottom: 2px solid black;
-                padding: $padding-top-bottom;   
-            }
-    
-            .next {
-                cursor: pointer;
-                width: 150px;
-                justify-self: end;
-                align-self: right;
-                color: $text-color-blue;
-                text-align: right;
-                border-bottom: 2px solid black;
-                padding: $padding-top-bottom;
-                
-            }
-		}
-
-
-
-// -------------------------------------------
-		// Tablet and Mobile begins
-        @media (max-width: $phone-tablet) {
-            display: block;
-
-            header {
-                
+            .prev-next {
+                display: flex;
                 justify-content: space-between;
-                flex-wrap: wrap;
-                flex-direction: row-reverse;
-                margin-top: 0; 
-                margin-right: 5%;
-                .menu-li{
-                    float: left;
-                    text-align: left;
-                    margin-left: 5%;
-                }
-
-                .hamburger{
-                margin: 0 0 5% 5%;
-                }
             }
-        
-        
-    
-            @include mobile-menu-bar;
-            main{
-                display:block;
-                margin: 0 5%;
-            }
-    
-            main {
 
-                section {
-				
-					img {
-						width: 100%;
-						height: auto;
-					}
-    
-                    h2 {
-                        text-align: center;
-    
-                        a {
-                            @include no-style-link;
-                        }
-                    }
-    
+        } // Section end
 
-    
-					.prev-next {
-						display: flex;
-                        justify-content: space-between;
-                        margin-bottom: 70px;
-                        
-                        .prev {
-                            cursor: pointer;
-                            width: 150px;
-                            justify-self: start;
-                            align-self: center;
-                            color: $text-color-blue;
-                            text-align: left;
-                            border-bottom: 2px solid black;
-                            padding: $padding-top-bottom;
-                        }
-                        .next {
-                            cursor: pointer;
-                            width: 150px;
-                            justify-self: end;
-                            align-self: center;
-                            color: $text-color-blue;
-                            text-align: right;
-                            border-bottom: 2px solid black;
-                            padding: $padding-top-bottom;
-                        }
-					}
-					
+    } // Main end
 
-					
-                    
-    
-    
-                } // End section - Tablet and Mobile
-    
-            } // End main - Tablet and Mobile
-            @include subscribes-mobile;
-                .subscribes-box {
-                    text-align: center;
-                }
-        
-        } // End media query
-    
-    } // End collectors-josh-jack- Tablet and Mobile 
+}
+// -------------------------------------------
 
-} // End jj-collectors
-
+} // pg-josh end   
