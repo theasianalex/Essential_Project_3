@@ -1,7 +1,12 @@
+.footer-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 footer {
     font-size: $font-p;
     font-weight: bold;
-    max-width: 160px;
+    width: 160px;
     display: block;
     margin: 10px 0 20px 0;
 

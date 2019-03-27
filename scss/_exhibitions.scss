@@ -3,6 +3,12 @@
     main {
         display:block;
         margin: 20px 10px 0 10px;
+
+        .text {
+            font-family: $font;
+            font-size: $font-p;
+            line-height: 30px;
+        }
     }
 
     @include bp($phone-tablet) {
